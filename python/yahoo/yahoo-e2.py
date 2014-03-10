@@ -25,7 +25,7 @@ def findTrain(inputArray):
 		if number < 1.0:
 			currentTrain += 1
 			#print "lessThanOne: %s" % item
-			currentProduct = 1.0
+			currentProduct = number
 		else:
 			currentProduct *= number
 		#print "currentTrain: %s, currentProduct: %s, number: %s" % (currentTrain,currentProduct,number)
