@@ -24,10 +24,11 @@ def findTrain(inputArray):
 		number = float(item)
 		if number < 1.0:
 			currentTrain += 1
-			print "lessThanOne: %s" % item
+			#print "lessThanOne: %s" % item
 			currentProduct = 1.0
-		print "currentTrain: %s, currentProduct: %s, number: %s" % (currentTrain,currentProduct,number)
-		currentProduct *= number
+		else:
+			currentProduct *= number
+		#print "currentTrain: %s, currentProduct: %s, number: %s" % (currentTrain,currentProduct,number)
 		if currentProduct > maxProduct:
 			maxProduct = currentProduct
 			maxTrain = currentTrain
