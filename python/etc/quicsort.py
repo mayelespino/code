@@ -19,11 +19,7 @@ def quickSort(toSort):
             high.append(num)
  
     for item in low:
-			print item,
-    print "\n=====\n"
-    for item in high:
-       print item,
-    print "\n........\n"
+	print item,
 
     sortedList = quickSort(low)
     sortedList.append(pivot)
