@@ -1,0 +1,10 @@
+require 'yaml'
+
+yml = YAML.load_file 'resume.yml'
+yml.each { |skills|
+    skills.each { |line|
+        puts "#{line}\n"
+        puts "----------"
+    }
+}
+

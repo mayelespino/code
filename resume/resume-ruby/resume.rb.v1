@@ -1,0 +1,10 @@
+require 'yaml'
+
+@resume_yml = (File.exists?("resume.yml") ? YAML.load_file("resume.yml") : nil)
+    if !@resume_yml.nil?
+        puts "----"
+        @resume_yml['skills'].each{ |skill|
+                skill
+        }
+    end
+
