@@ -21,7 +21,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-		<meta http-equiv="refresh" content="120" >
+	<meta http-equiv="refresh" content="120" >
+	<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 		
     <title>Find Mayel Espino</title>
     <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.8.0r4/build/reset-fonts-grids/reset-fonts-grids.css">
@@ -79,6 +80,49 @@
         <td>Longitude:</td>
         <td><?PHP echo $loc['longitude']; ?></td>
         </tr>
+	<tr>
+	<td>Address : </td>
+        <td><?PHP echo $json["results"][0]["formatted_address"]; ?></td>
+	</tr>
     </table>
+
+  <?PHP
+   $service_url = 'http://maps.google.com/maps/api/geocode/json?latlng='+$loc['latitude']+','+$loc['longitude']+'&sensor=false';
+   $service_url = sprintf('http://maps.google.com/maps/api/geocode/json?latlng=%s,%s&sensor=false',$loc['latitude'] , $loc['longitude']);
+   //$service_url = 'http://maps.google.com/maps/api/geocode/json?latlng=37.154452255962,-121.60248993907&sensor=false';
+   //echo $service_url;
+   echo "<br/>";
+   $curl = curl_init($service_url);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+   curl_setopt($curl, CURLOPT_POST, true);
+   curl_setopt($curl, CURLOPT_POSTFIELDS, $curl_post_data);
+   $curl_response = curl_exec($curl);
+   curl_close($curl);
+   $json = json_decode($curl_response,true);
+
+
+   echo "<br>1=========<br>";
+   echo $json["results"][0]["formatted_address"];
+   echo "<br>2=========<br>";
+   //echo $curl_response;
+   //print_r($json);
+   var_dump($json);
+   echo "<br>3=========<br>";
+foreach ($json as $key => $value) {
+    //echo "$key<br>";
+    foreach ($value as $k => $v) {
+        //echo "$k | $v <br/>";
+	foreach($v as $k2 =>$v2){
+        	echo "$k2 | $v2<br/>";
+		foreach($v2 as $k3 =>$v3){
+        		//echo "$k3 | $v3<br/>";
+		}
+	}
+    }
+}
+   echo "<br>4=========<br>";
+   //curl_close($curl);
+?>
+
 </body>
 </html>
