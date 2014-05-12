@@ -6,7 +6,7 @@
     $google_maps_key = '';
 
     // Enter your MobileMe username and password
-    $ssm = new Sosumi('mayelespino', '3878@rio-senegal.juarez');
+    $ssm = new Sosumi('mayelespino', '***********************');
     $loc = $ssm->locate();
     
     if(isset($_POST['btnSend']))
