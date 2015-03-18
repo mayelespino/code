@@ -1,6 +1,6 @@
 #
 #http://ss64.com/bash/syntax-prompt.html
-export PS1='\[\e[33m\][\u|\h|\w]\[\e[0m\]\n>'
+export PS1='\[\e[33m\][\u | \h | \w]\[\e[0m\]\n>'
 #export PS1='[\u@\h:\w]\n\[\e[33m\]>\[\e[0m\]'
 export PS2="> "
 export PATH=$PATH:~/bin
