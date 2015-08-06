@@ -27,13 +27,18 @@ def checkCoordinate(inMatrix, inRow, inCol):
         validCoordinate = False
     return validCoordinate
 
-
+def printTheDiagonalSequence(inSequence):
+    print "now printing in a bell curve format."
+    for element in inSequence:
+        print element,
 
 def printMatrixDiagonal(inMatrix, inDepth, inWidth):
     if len(inMatrix) < 1:
         print "nothing to print diagonal"
 
+    diagonalSequence = []
     if inDepth == 1 or inWidth == 1:
+        print "Diagonal sequence: "
         for value in inMatrix:
             print value,
         return
@@ -45,6 +50,7 @@ def printMatrixDiagonal(inMatrix, inDepth, inWidth):
     C = 0
 
 
+    print "Diagonal sequence: "
     for index in xrange(1,totalItems):
         try:
             value = inMatrix[R][C]
@@ -62,6 +68,7 @@ def printMatrixDiagonal(inMatrix, inDepth, inWidth):
             value = inMatrix[R][C]
 
         print value,
+        diagonalSequence.append(value)
 
         if R == 0 and C == 0:
             R = 0
@@ -83,7 +90,10 @@ def printMatrixDiagonal(inMatrix, inDepth, inWidth):
 
     R = inDepth - 1
     C = inWidth - 1
-    print inMatrix[R][C]
+    value = inMatrix[R][C]
+    print value
+    diagonalSequence.append(value)
+    printTheDiagonalSequence(diagonalSequence)
 #
 #
 #
