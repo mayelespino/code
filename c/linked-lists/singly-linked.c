@@ -32,7 +32,7 @@ node* createList(char inList[])
 void printList(node *inList)
 {
     node *currentNode = inList;
-    while(currentNode != NULL)
+    while(currentNode->next != NULL)
     {
         printf("%c,", currentNode->data);
         currentNode = currentNode->next;
