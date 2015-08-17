@@ -42,7 +42,7 @@ void printList(node *inList)
 void main(void)
 {
     node *head = NULL;
-    char aList[4] = {'a','b','c','d'};
+    char aList[4] = {'a','b','c','d','e','f','g'};
     head = createList(aList, sizeof(aList));
     printList(head);
     return;
