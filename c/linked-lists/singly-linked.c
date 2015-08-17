@@ -35,8 +35,10 @@ void printList(node *inList)
     while(currentNode->next != NULL)
     {
         printf("%c,", currentNode->data);
-        if (currentNode->next != NULL)
+        if (currentNode->next != NULL) {
+            print "---"
             currentNode = currentNode->next;
+        }
         else
             break;
     }
