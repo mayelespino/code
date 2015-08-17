@@ -24,11 +24,6 @@ node* createList(char inList[],int inArraySize)
     {
         currentNode->next = newNode(inList[i]);
         currentNode = currentNode->next;
-        printf("added:%c\n", currentNode->data);
-        if (currentNode->next == NULL)
-            printf("NULL\n");
-        else
-            printf("*next\n");
     }
     return tmpList;
 }
