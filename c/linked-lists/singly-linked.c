@@ -29,7 +29,7 @@ node* createList(char inList[])
         if (currentNode->next == NULL)
             print("NULL");
         else
-            print("*next")
+            print("*next");
     }
     return tmpList;
 }
