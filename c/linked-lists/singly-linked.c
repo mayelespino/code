@@ -31,10 +31,21 @@ node* createList(char inList[])
     return tmpList;
 }
 
+void printList(node *inList)
+{
+    node *currentNode = inList;
+    while(currentNode != NULL)
+    {
+        printf("%c|", currentNode->data);
+        currentNode = currentNode->next;
+    }
+}
+
+
 void main(void)
 {
     char aList[4] = {'a','b','c','d'};
     head = createList(aList);
-    printf ("char:%c\n",head->data);
+    printList(head);
     return;
 }
