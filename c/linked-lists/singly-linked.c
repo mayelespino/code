@@ -17,7 +17,7 @@ node* newNode(char inChar)
 
 node* createList(char inList[])
 {
-    int Len = sizeof(inList)/sizeof(char);
+    int Len = sizeof(inList)/sizeof(inList[0]);
     printf("size:%i \n",Len);
     //int Len = 4;
     int i;
