@@ -37,7 +37,7 @@ void printList(node *inList)
     while(currentNode->next != NULL)
     {
         printf("%c|", currentNode->data);
-        currentNode++;
+        currentNode = currentNode->next;
     }
 }
 
