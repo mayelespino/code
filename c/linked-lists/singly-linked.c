@@ -6,9 +6,6 @@ typedef struct node_struct {
     struct node_struct *next;
 } node;
 
-node *head = NULL;
-node *current = NULL;
-
 node* newNode(char inChar)
 {
     node *tmpNode = (node*)malloc(sizeof(node));
@@ -45,8 +42,10 @@ void printList(node *inList)
 
 void main(void)
 {
+    node *head = NULL;
     char aList[4] = {'a','b','c','d'};
     head = createList(aList);
     printList(head);
     return;
-} 
+}
+
