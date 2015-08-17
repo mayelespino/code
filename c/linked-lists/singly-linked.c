@@ -13,6 +13,7 @@ node* newNode(char inChar)
 {
     node *tmpNode = (node*)malloc(sizeof(node));
     tmpNode->data = inChar;
+    tmpNode->next = NULL;
     return tmpNode;
 }
 
@@ -36,7 +37,7 @@ void printList(node *inList)
     node *currentNode = inList;
     while(currentNode != NULL)
     {
-        printf("%c|", currentNode->data);
+        printf("%c,", currentNode->data);
         currentNode = currentNode->next;
     }
 }
