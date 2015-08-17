@@ -17,7 +17,7 @@ node* newNode(char inChar)
 
 node* createList(char inList[])
 {
-    int Len = sizeof(inList);
+    int Len = sizeof(inList)/sizeof(char);
     int i;
     node *tmpList = newNode(inList[0]);
     node *currentNode = tmpList;
@@ -27,9 +27,9 @@ node* createList(char inList[])
         currentNode = currentNode->next;
         printf("added:%c\n", currentNode->data);
         if (currentNode->next == NULL)
-            printf("NULL");
+            printf("NULL\n");
         else
-            printf("*next");
+            printf("*next\n");
     }
     return tmpList;
 }
