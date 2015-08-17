@@ -15,14 +15,12 @@ node* newNode(char inChar)
 }
 
 
-node* createList(char inList[]  )
+node* createList(char inList[],int inArraySize)
 {
-    int Len = sizeof(inList)/2;
-    printf("size:%i,%i,%i \n",Len,sizeof(inList),sizeof(char));
     int i;
     node *tmpList = newNode(inList[0]);
     node *currentNode = tmpList;
-    for(i = 1; i < Len; i++)
+    for(i = 1; i < inArraySize; i++)
     {
         currentNode->next = newNode(inList[i]);
         currentNode = currentNode->next;
@@ -50,7 +48,7 @@ void main(void)
 {
     node *head = NULL;
     char aList[4] = {'a','b','c','d'};
-    head = createList(aList);
+    head = createList(aList, sizeof(aList));
     printList(head);
     return;
 }
