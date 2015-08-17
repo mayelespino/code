@@ -13,7 +13,6 @@ node* newNode(char inChar)
 {
     node *tmpNode = (node*)malloc(sizeof(node));
     tmpNode->data = inChar;
-    tmpNode->next = inNext;
     return tmpNode;
 }
 
@@ -21,9 +20,10 @@ node* newNode(char inChar)
 node* createList(char inList[])
 {
     int Len = sizeof(inList);
+    int i;
     node *tmpList = newNode(inList[0]);
     node *currentNode = tmpList;
-    for(int i = 1; i < Len; i++)
+    for(i = 1; i < Len; i++)
     {
         currentNode->next = newNode(inList[i]);
         currentNode = currentNode->next;
