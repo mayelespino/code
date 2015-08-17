@@ -28,11 +28,13 @@ node* createList(char inList[])
         currentNode->next = newNode(inList[i]);
         currentNode = currentNode->next;
     }
+    return tmpList;
 }
 
 void main(void)
 {
-    head = newNode('a',NULL);
+    char aList[4] = {'a','b','c','d'};
+    head = createList(aList);
     printf ("char:%c\n",head->data);
     return;
 }
