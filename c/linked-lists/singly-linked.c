@@ -25,6 +25,11 @@ node* createList(char inList[])
     {
         currentNode->next = newNode(inList[i]);
         currentNode = currentNode->next;
+        printf("added:%c\n", currentNode->data);
+        if (currentNode->next == NULL)
+            print("NULL");
+        else
+            print("*next")
     }
     return tmpList;
 }
@@ -32,15 +37,10 @@ node* createList(char inList[])
 void printList(node *inList)
 {
     node *currentNode = inList;
-    while(currentNode->next != NULL)
+    while(currentNode != NULL)
     {
         printf("%c,", currentNode->data);
-        if (currentNode->next != NULL) {
-            printf("-%c-\n",currentNode->data);
-            currentNode = currentNode->next;
-        }
-        else
-            break;
+        currentNode = currentNode->next;
     }
 }
 
