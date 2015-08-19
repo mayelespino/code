@@ -38,7 +38,7 @@ void printList(node *inList)
     }
 }
 
-
+// -- MAIN --
 void main(void)
 {
     node *head = NULL;
