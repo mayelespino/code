@@ -38,6 +38,18 @@ void printList(node *inList)
     }
 }
 
+void deleteList(node *inList)
+{
+    node *currentNode = inList;
+    node *nextNode = inList;
+    while(currentNode != NULL)
+    {
+        nextNode = currentNode->next;
+        free(currentNode);
+        currentNode = nextNode;
+    }
+}
+
 // -- MAIN --
 void main(void)
 {
