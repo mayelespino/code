@@ -5,8 +5,8 @@ import socket
 import sys
 
 HOST = ''                 # Symbolic name meaning the local host
-#PORT = 50007              # Arbitrary non-privileged port
-PORT=80
+PORT = 50007              # Arbitrary non-privileged port
+#PORT=80
 s = None
 for res in socket.getaddrinfo(HOST, PORT, socket.AF_UNSPEC, socket.SOCK_STREAM, 0, socket.AI_PASSIVE):
         af, socktype, proto, canonname, sa = res
@@ -33,8 +33,8 @@ while 1:
     data = conn.recv(1024)
     myData = data
     print "data ",data
-    #if not data: break
-    if myData == 0 : break
+    if not data: break
+    #if 'exit' in data: break
     conn.send(data)
 conn.close()
 
