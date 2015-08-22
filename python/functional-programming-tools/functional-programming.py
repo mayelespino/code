@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#https://docs.python.org/2/tutorial/datastructures.html
 
 #---- filter ----
 print "---- filter ----"
