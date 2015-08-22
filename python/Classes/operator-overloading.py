@@ -1,3 +1,4 @@
+#https://docs.python.org/3/reference/datamodel.html#special-method-names
 class DataPoints(object):
     def __init__(self,pointA, pointB):
         self.pointA=pointA
