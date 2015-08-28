@@ -11,5 +11,6 @@ for index in range(stringLenght-1):
     if randomString[index] in randomString[index+1:]:
         print 'Found ',randomString[index], 'duplicated'
         isUnique = False
+        //TODO: break out of loop if one letter is repeated
 
 print 'return',isUnique
