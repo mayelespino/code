@@ -1,0 +1,5 @@
+https://realpython.com/blog/python/create-a-super-basic-rest-api-with-django-tastypie/
+https://github.com/mjhea0/django-tastypie-tutorial/blob/master/django15/django15/urls.py
+
+https://docs.djangoproject.com/en/1.8/intro/tutorial01/
+
