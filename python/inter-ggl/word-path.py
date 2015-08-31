@@ -2,7 +2,7 @@
 import re
 import heapq
 
-myDicct=["dig","dog","git","tic","tac","god","got","fig","rig","fog"]
+myDicct=["dig","dog","git","tic","tac","god","got","fig","rig","fog","cat","did","rag"]
 
 def findPatternInDicctionary(inPattern, inDicctionary):
     m = None
