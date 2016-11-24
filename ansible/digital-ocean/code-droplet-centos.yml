@@ -1,0 +1,34 @@
+---
+- hosts: code
+  remote_user: root
+  become: yes
+  tasks:
+    - name: install git
+      yum: state=present name=git
+      tags: git
+    - name: clone code repo
+      git: repo=https://github.com/mayelespino/code.git
+           dest=~/code
+           force=yes
+           recursive=no
+      tags: git
+    - name: install golang
+      yum: state=present name=golang
+      tags: golang 
+    - name: install java
+      yum: state=present name=java-sdk
+      tags: java 
+      # yum install gcc gcc-c++ autoconf automake
+    - name: install gcc
+      yum: state=present name=gcc
+      tags: gcc
+    - name: install gcc-c++
+      yum: state=present name=gcc-c++
+      tags: gcc
+    - name: install autoconf
+      yum: state=present name=autoconf
+      tags: gcc
+    - name: install automake
+      yum: state=present name=automake
+      tags: gcc
+
