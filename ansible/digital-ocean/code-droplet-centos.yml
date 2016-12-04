@@ -8,7 +8,7 @@
       tags: git
     - name: clone code repo
       git: repo=https://github.com/mayelespino/code.git
-           dest=~/code
+           dest=~/code  
            force=yes
            recursive=no
       tags: git
