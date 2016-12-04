@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="CMakeSettings" AUTO_RELOAD="false" GENERATION_PASS_SYSTEM_ENVIRONMENT="true">
-    <ADDITIONAL_GENERATION_ENVIRONMENT>
-      <envs />
-    </ADDITIONAL_GENERATION_ENVIRONMENT>
-  </component>
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$">
     <contentRoot DIR="$PROJECT_DIR$/helloWold" />
-  </component>
-  <component name="NamedScopeManager">
-    <order />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -21,8 +13,4 @@
     <ConfirmationsSetting value="0" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
-  <component name="ProjectModuleManager">
-    <modules />
-  </component>
-  <component name="ProjectRootManager" version="2" />
 </project>

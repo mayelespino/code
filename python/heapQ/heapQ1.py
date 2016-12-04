@@ -1,6 +1,7 @@
 __author__ = 'mayelespino'
 import heapq
 from random import randint
+from heapq_showtree import show_tree
 
 heap = []
 

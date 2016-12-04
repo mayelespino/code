@@ -1,0 +1,68 @@
+#!/usr/bin/python
+
+import threading
+import time
+import sys
+
+class elevatorClass (threading.Thread):
+    def __init__(self, elevatorID, name, initialFloor):
+        threading.Thread.__init__(self)
+        self.threadID = elevatorID
+        self.name = name
+        self.current_floor = initialFloor
+        self.requested_floor = initialFloor
+        self.stopIT = False
+    def wait(self):
+        time.sleep(2)
+    def run(self):
+        while not self.stopIT:
+            sys.stdout.write("[%s] current floor: %d  Requested floor: %d\n" % (self.name, self.current_floor, self.requested_floor))
+            if self.current_floor <  self.requested_floor:
+                sys.stdout.write(">>>UP<<")
+                self.current_floor += 1
+                sys.stdout.write("[%s] MOVING UP current floor: %d  Requested floor: %d\n" % (self.name, self.current_floor, self.requested_floor))
+            elif self.current_floor > self.requested_floor:
+                sys.stdout.write(">>>DOWN<<")
+                self.current_floor -= 1
+                sys.stdout.write("[%s] MOVING DOWN current floor: %d  Requested floor: %d\n" % (self.name, self.current_floor, self.requested_floor))
+            else:
+                sys.stdout.write("[%s] ARRIVED!! current floor: %d  Requested floor: %d\n" % (self.name, self.current_floor, self.requested_floor))
+                self.stopIT = True
+
+            self.wait()
+    def requestFloor(self,newFloor):
+        sys.stdout.write(">>> [%s] - new floor REQUEST: %d\n" % (self.name, newFloor))
+        self.requested_floor = newFloor
+    def stopElevator(self):
+        sys.stdout.write("[%s] -  STOP requested.\n" % self.name)
+        self.stopIT = True
+
+
+# Create new threads
+elevator1 = elevatorClass(1, "Elevator-1", 1)
+elevator2 = elevatorClass(2, "Elevator-2", 2)
+elevator3 = elevatorClass(3, "Elevator-3", 25)
+
+# Start new Threads
+elevator1.start()
+elevator2.start()
+elevator3.start()
+#
+elevator1.requestFloor(10)
+#elevator2.requestFloor(8)
+#elevator3.requestFloor(1)
+#time.sleep(5)
+#
+#elevator1.requestFloor(2)
+#elevator2.requestFloor(1)
+# time.sleep(5)
+#print "Stopping Elevators 1 and 2."
+#elevator1.stopElevator()
+#elevator2.stopElevator()
+#
+#time.sleep(5)
+#print "Stopping Elevator 3."
+#elevator3.stopElevator()
+
+
+print "Exiting Main Thread"

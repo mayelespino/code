@@ -18,8 +18,8 @@ def quickSort(toSort):
         else:
             high.append(num)
  
-    for item in low:
-	print item,
+#    for item in low:
+#	print item,
 
     sortedList = quickSort(low)
     sortedList.append(pivot)
