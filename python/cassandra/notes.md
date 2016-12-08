@@ -17,3 +17,13 @@ CREATE INDEX ON Excelsior.users (mykey);
 
 insert into mytable (myid, mykey, myvalue) values (now(), 'name', 'amadeus');     
 ```
+
+```
+CREATE TABLE excelsior.table2 (
+mykey text,
+myvalue text,
+PRIMARY KEY ((key), value)
+);
+
+CREATE INDEX ON excelsior.table2 (key);
+```
