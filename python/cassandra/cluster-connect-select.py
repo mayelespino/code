@@ -5,4 +5,6 @@ session = cluster.connect()
 session.set_keyspace('excelsior')
 rows = session.execute('SELECT * FROM mytable')
 for row in rows:
-    print row, row.mykey, row.myvalue
+    print row
+    print row.mykey
+    print row.myvalue
