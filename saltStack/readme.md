@@ -7,3 +7,5 @@
 - http://eon01.com/blog/saltstack-learn-more-about-using-grains/
 # Other links
 - http://stackoverflow.com/questions/4760215/running-shell-command-from-python-and-capturing-the-output
+# Role based architecture
+- http://www.saltstat.es/posts/role-infrastructure.html

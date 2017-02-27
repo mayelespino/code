@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
-project(interQS)
+project(interQS01)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES main.cpp)
-add_executable(interQS ${SOURCE_FILES})
+add_executable(interQS01 ${SOURCE_FILES})
