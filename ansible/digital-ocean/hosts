@@ -1,4 +1,2 @@
-[code]
-45.55.198.164 ansible_connection=ssh  ansible_ssh_user=root
-[cassandra]
-159.203.107.80 ansible_connection=ssh  ansible_ssh_user=root
+[droplet]
+104.131.108.74 ansible_connection=ssh  ansible_ssh_user=root
