@@ -1,0 +1,40 @@
+#
+#
+#
+export PROMPT='%m@%~ => '
+#
+#
+#
+path+=('/usr/local/bin')
+export cdpath=( . ~/Repos ~/Repos/code ~/Repos/interq )
+#export CDPATH=.:~/Repos:~/Repos/code:~/Repos/interq
+#
+#
+export GOPATH=/Users/mayelespino/Repos/code/go-lang
+export GOROOT=/usr/local/opt/go/libexec
+
+#
+#
+alias l='ls -hF'
+alias ll='ls -htAFl'
+alias lc='ls -Fm'
+alias l1='ls -1'
+alias la='ls -aF'
+alias L='ls -F | grep /'
+alias c='clear'
+alias gh='cd /x/local/maespino/githome/gimp'
+alias ldr='ls -AF *|grep \/'
+alias mp='ps -alumaespino | grep -v tcs| grep -v bash | grep -v ssh | grep -v grep'
+# alias d='history | grep -w cd  | grep -v history | cut -c 26- | sort -u'
+alias d='pushd .'
+# alias C='pushd .;cd '
+alias D='dirs -l -v |grep -v 0'
+alias v='/usr/local/bin/gvim -p'
+#
+#
+#
+function lk
+{
+    ls | grep -i $1
+}
+
