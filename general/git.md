@@ -224,3 +224,8 @@ index b107339..a804102 100644
 
 >git diff --color-words branch1..branch2
 ```
+## Git alias
+- https://githowto.com/aliases
+```
+git config --global alias.co checkout
+```

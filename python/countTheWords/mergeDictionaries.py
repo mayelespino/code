@@ -4,6 +4,9 @@ Takes at least 2 parameters:
 - first paramerer is a string to be added to the name of the file which containes the results of the merge.
 - second and onward: the name of the file(s) which contain the JSON dictionary to merge.
 writes a JSON file with the data from the resulting dicionary.
+
+Author: Mayel Espino.
+Jul 22,2017
 """
 import sys
 import json
