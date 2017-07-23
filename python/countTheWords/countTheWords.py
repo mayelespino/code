@@ -1,3 +1,12 @@
+"""
+Counts the words passed in the comamnd line.
+Takes > 2 parameters:
+- the name of the file to create
+- from second parameter onwards, the words to be counted.
+
+Author: Mayel Espino.
+Jul 22,2017
+"""
 import threading
 import sys
 import json
@@ -11,10 +20,8 @@ class wordThread(threading.Thread):
           self.word = _word
    def run(self):
           print ("processing " + self.word)
-          # Get lock to synchronize threads
           threadLock.acquire()
           updateDictionary(self.dictionary, self.word)
-          # Free lock to release next thread
           threadLock.release()
 
 def updateDictionary(_dictionary, _word):
@@ -27,8 +34,6 @@ def updateDictionary(_dictionary, _word):
 threadLock = threading.Lock()
 threads = []
 
-print(sys.argv[0])
-print(sys.argv[1])
 if len(sys.argv) < 3:
     print("usage: file_name word .... word")
     sys.exit(1)
