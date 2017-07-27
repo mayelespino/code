@@ -33,8 +33,8 @@ print("\nGrand Totals, writting file {}\n".format(mergedFileName))
 with open(mergedFileName, 'w') as mergedFile:
     json.dump(dictionary, mergedFile)
 
-for key in dictionary.keys():
-    print("{}: {}".format(key, dictionary[key]))
+#for key in dictionary.keys():
+#    print("{}: {}".format(key, dictionary[key]))
 
 print("\nTop 10\n")
 sortedList = sorted(dictionary.items(), key=operator.itemgetter(1))

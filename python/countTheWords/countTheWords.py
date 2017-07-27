@@ -19,7 +19,7 @@ class wordThread(threading.Thread):
           self.dictionary = _dictionary
           self.word = _word
    def run(self):
-          print ("processing " + self.word)
+          #print ("processing " + self.word)
           threadLock.acquire()
           updateDictionary(self.dictionary, self.word)
           threadLock.release()
