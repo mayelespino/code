@@ -1,0 +1,20 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = mayel espino
+#	email = mayelespino@mayels-MacBook-Pro.local
+[user]
+	name = Mayel Espino
+	email = mayel.espino@gmail.com
+[push]
+	default = simple
+[core]
+	excludesfile = /Users/mayelespino/.gitignore_global
+[alias]
+	c = commit -am
+	S = show
+	ls = ls-tree
+	lg = log --graph
+	l = log --oneline -5
+	gr = log --oneline --grep
+	st = status
