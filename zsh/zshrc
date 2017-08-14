@@ -1,0 +1,67 @@
+#
+#
+#
+autoload -U promptinit && promptinit
+autoload -U colors
+#export PROMPT='%F{yellow} %~ %F{white}>'
+#export RPROMPT='%B[rc:%?|h:%!]%b'
+#
+export PROMPT=' %F{011}%~ %F{021}❯%F{006}❯%F{014}❯%f '
+export RPROMPT='%F{237}[rc:%?|h:%!]%f'
+#
+path+=('/usr/local/bin')
+export cdpath=( . ~/Repos ~/Repos/code ~/Repos/interq )
+#export CDPATH=.:~/Repos:~/Repos/code:~/Repos/interq
+
+# 
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+#
+export GOPATH=/Users/mayelespino/Repos/code/go-lang
+export GOROOT=/usr/local/opt/go/libexec
+#
+alias l='ls -hF'
+alias ll='ls -htAFl'
+alias lc='ls -Fm'
+alias l1='ls -1'
+alias la='ls -aF'
+alias L='ls -F | grep /'
+alias c='clear'
+alias gh='cd /x/local/maespino/githome/gimp'
+alias ldr='ls -AF *|grep \/'
+alias mp='ps -alumaespino | grep -v tcs| grep -v bash | grep -v ssh | grep -v grep'
+# alias d='history | grep -w cd  | grep -v history | cut -c 26- | sort -u'
+alias d='pushd .'
+# alias C='pushd .;cd '
+alias D='dirs -lp| uniq'
+alias v='/usr/local/bin/gvim -p'
+#
+#
+#
+function lk
+{
+    ls | grep -i $1
+}
+
+# Dirstack
+DIRSTACKFILE="$HOME/.cache/zsh/dirs"
+if [[ -f $DIRSTACKFILE ]] && [[ $#dirstack -eq 0 ]]; then
+  dirstack=( ${(f)"$(< $DIRSTACKFILE)"} )
+  [[ -d $dirstack[1] ]] && cd $dirstack[1]
+fi
+chpwd() {
+  print -l $PWD ${(u)dirstack} >$DIRSTACKFILE
+}
+
+DIRSTACKSIZE=20
+
+setopt AUTO_PUSHD PUSHD_SILENT PUSHD_TO_HOME
+
+## Remove duplicate entries
+setopt PUSHD_IGNORE_DUPS
+
+## This reverts the +/- operators.
+setopt PUSHD_MINUS
