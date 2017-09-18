@@ -1,8 +1,11 @@
-#
+#!/bin/zsh
 #
 #
 autoload -U promptinit && promptinit
 autoload -U colors
+autoload -U compinit
+compinit
+
 #export PROMPT='%F{yellow} %~ %F{white}>'
 #export RPROMPT='%B[rc:%?|h:%!]%b'
 #
@@ -14,9 +17,18 @@ export cdpath=( . ~/Repos ~/Repos/code ~/Repos/interq )
 #export CDPATH=.:~/Repos:~/Repos/code:~/Repos/interq
 
 # 
-HISTSIZE=10000
-SAVEHIST=10000
-HISTFILE=~/.zsh_history
+export HISTSIZE=50000
+export HISTFILE=~/.zsh_history
+export SAVEHIST=$HISTFILE
+setopt hist_ignore_all_dups
+setopt hist_ignore_space
+setopt append_history
+setopt inc_append_history
+setopt share_history
+#
+setopt correctall
+setopt extendedglob
+#
 bindkey -v
 bindkey '^R' history-incremental-search-backward
 #
