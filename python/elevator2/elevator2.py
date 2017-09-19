@@ -20,7 +20,6 @@ def f(x):
     print("Elevator[{}]{}".format(elevator_number,elevator_string ))
     sys.stdout.flush()
 
-    current_floor = 99
     return(elevator_number, current_floor, requested_floor)
 
 if __name__ == '__main__':
