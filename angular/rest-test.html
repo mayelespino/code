@@ -1,0 +1,20 @@
+<html>
+    <head>
+    </head>
+    <body>  
+          <script type="text/JavaScript">
+          function httpGet(theUrl)
+          {
+            var xmlHttp = null;
+        
+            xmlHttp = new XMLHttpRequest();
+            xmlHttp.open( "GET", theUrl, false );
+            xmlHttp.send( null );
+            return xmlHttp.responseText;
+          }
+          var $result = httpGet("https://feeds.citibikenyc.com/stations/stations.json")
+          alert($result)
+          document.write($result);
+          </script>
+    </body>
+</html>
