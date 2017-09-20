@@ -9,7 +9,7 @@ import (
 func main() {
 	array_random_ints := random_list(10)
 
-	fmt.Println(" Unordered list:")
+	fmt.Println("\n\nUnordered list:")
 	for _, element := range array_random_ints {
 		fmt.Print(element)
 		fmt.Print(" ")
@@ -21,6 +21,7 @@ func main() {
 		fmt.Print(element)
 		fmt.Print(" ")
 	}
+	fmt.Println("\n")
 }
 
 func random_list(l int) []int {
@@ -66,7 +67,7 @@ func merge_sort(list_to_sort []int) []int {
 
 		idx_r++
 
-		if len(part_a) <= idx_a || len(part_b) <= idx_b {
+		if len(part_a) == idx_a || len(part_b) == idx_b {
 			break
 		}
 	}
