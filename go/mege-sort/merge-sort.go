@@ -9,14 +9,14 @@ import (
 func main() {
 	array_random_ints := random_list(10)
 
-	fmt.Println(" Un ordered list:")
+	fmt.Println(" Unordered list:")
 	for _, element := range array_random_ints {
 		fmt.Print(element)
 		fmt.Print(" ")
 	}
 
 	sorted_list := merge_sort(array_random_ints)
-	fmt.Println(" Un ordered list:")
+	fmt.Println("\nSorted list:")
 	for _, element := range sorted_list {
 		fmt.Print(element)
 		fmt.Print(" ")
@@ -63,24 +63,28 @@ func merge_sort(list_to_sort []int) []int {
 			result_list[idx_r] = part_b[idx_b]
 			idx_b++
 		}
+
 		idx_r++
 
 		if len(part_a) <= idx_a || len(part_b) <= idx_b {
 			break
-			}
+		}
 	}
 
-	if len(part_a) > idx_a{
+	if len(part_a) > idx_a {
 		for {
 			result_list[idx_r] = part_a[idx_a]
 			idx_a++
-			if len(part_a) >= idx_a {break}
+			idx_r++
+			if len(part_a) == idx_a {break}
 		}
-	} else {
+	}
+	if len(part_b) > idx_b {
 		for {
 			result_list[idx_r] = part_b[idx_b]
 			idx_b++
-			if len(part_b) >= idx_b {
+			idx_r++
+			if len(part_b) == idx_b {
 				break
 			}
 		}
