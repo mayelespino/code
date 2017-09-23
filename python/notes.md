@@ -1,5 +1,7 @@
 # Python notes
-
-## links
-- [PEP 8] (https://www.python.org/dev/peps/pep-0008/)
-- [Python graphics - ipython - SciPy](https://www.scipy.org/getting-started.html)
+- [cassandra](cassandra/notes.md)
+- [elevator2](elevator2/notes.md)
+- [flask](flask/notes.md)
+- [zookeeper](notes/python-zookeper.md)
+- [Writting clean code](writting-clean-code.txt)
+- [Links to docs I found useful](notes/links.md)

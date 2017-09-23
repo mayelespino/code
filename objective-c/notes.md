@@ -1,2 +1,2 @@
 # Notes on objective C tutorial
-## links
+- [graphics](graphics/notes.md)
