@@ -33,9 +33,12 @@ def add_node(node, g, *edges):
             point_a_vertices = []
             for edge in edges:
                 if point_a in edge:
-                    point_a_edges.append(edge)
-                    point_a_vertices.append(edge[0])
-                    point_a_vertices.append(edge[1])
+                    if edge not in point_a_edges:
+                        point_a_edges.append(edge)
+                    if edge[0] not in point_a_vertices:
+                        point_a_vertices.append(edge[0])
+                    if edge[1] not in point_a_vertices:
+                        point_a_vertices.append(edge[1])
             g[point_a] = (point_a_vertices,point_a_edges)
 
         if point_b not in g:
@@ -44,8 +47,10 @@ def add_node(node, g, *edges):
             for edge in edges:
                 if point_b in edge:
                     point_b_edges.append(edge)
-                    point_b_vertices.append(edge[0])
-                    point_b_vertices.append(edge[1])
+                    if edge[0] not in point_b_vertices:
+                        point_b_vertices.append(edge[0])
+                    if edge[1] not in point_b_vertices:
+                        point_b_vertices.append(edge[1])
             g[point_b] = (point_b_vertices,point_b_edges)
 
 
@@ -66,24 +71,40 @@ def copy_node(node, g):
 
     g[new_node] = new_vertices, new_edges
 
-
-
-
-# def find_path_to_from(to_node,current_node,g_v):
-#     pass
-
-
 def print_graph(g):
     for node in g:
         vertices, edges = graph[node]
         print("{0:<5}:\t{1}\n\t\t{2}".format(node, vertices, edges))
 
+def recursive_search(to_node, current_node, g):
+    vertecies, edges = g[current_node]
 
+    if to_node in vertecies:
+        print("{}=>{}".format(current_node, to_node))
+        return 1
+
+    for vertice in vertecies:
+        if recursive_search(to_node, vertice, g) == 1:
+            break
+    return 0
+
+def find_path_to_from(to_node,from_node,g):
+    vertecies, edges = g[from_node]
+
+    if to_node in vertecies:
+        return 0
+
+    print("starting from {}, looking for {}".format(from_node, to_node))
+    for vertice in vertecies:
+        print("{}->{}".format(from_node, vertice))
+        if recursive_search(to_node, from_node, g) == 0:
+            break
 
 def main():
     add_node('a',graph, 'ab','ac','ad','bc','cd')
     add_node('a',graph, 'ax','ay')
     copy_node('a', graph)
     print_graph(graph)
+    find_path_to_from('x', 'c', graph)
 
 if __name__ == "__main__" : main()
