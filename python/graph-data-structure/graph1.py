@@ -106,5 +106,6 @@ def main():
     copy_node('a', graph)
     print_graph(graph)
     find_path_to_from('x', 'c', graph)
+    find_path_to_from('y', 'b', graph)
 
 if __name__ == "__main__" : main()
