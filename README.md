@@ -8,7 +8,7 @@ Code examples for tutorial purposes. In some cases I based my self on code I fou
 - [angular](angular/notes.md)
 - [bash](bash/notes.md)
 - [notebook:index](general/index.md)
-- [go](go/makeUnique/notes.md)
+- [go](go/notes.md)
 - [javascript](javascript/notes.md)
 - [lua](lua/notes.md)
 - [objective-c](objective-c/notes.md)
