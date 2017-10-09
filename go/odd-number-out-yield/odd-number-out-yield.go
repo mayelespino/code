@@ -6,11 +6,9 @@ import "fmt"
 You are given a list of numbers, and garanteed that only one of them occurs an odd number of times.
 Find the number which occurs an odd number of times.
  */
-import (
-	"fmt"
-)
 
-func find_odd_number(numbers[]int) int {
+func find_odd_number_yield(numbers[]int) chan int {
+	yield := make (chan int);
 	number_map := make(map[int]int)
 	for _, number := range numbers {
 		_, ok := number_map[number]
@@ -21,14 +19,21 @@ func find_odd_number(numbers[]int) int {
 		}
 	}
 
-	for key, value := range number_map{
-		if (value % 2) != 0 {
-			return(key)
+	go func ()  {
+		for key, value := range number_map{
+			if (value % 2) != 0 {
+				yield <- key
+			}
 		}
-	}
-	return(0)
+	} ();
+	return yield
 }
+
+
 func main() {
-	numbers := [] int  {1,1,1,9,2,2,1}
-	fmt.Println(find_odd_number(numbers))
+	numbers := [] int  {1,1,1,9,2,2,1,7,8,8,8}
+	fmt.Println("--")
+	list := find_odd_number_yield(numbers)
+	bar := <- list
+	fmt.Println(bar)
 }
