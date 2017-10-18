@@ -1,19 +1,11 @@
-# CODE
-Code examples for tutorial purposes. In some cases I based my self on code I found online, when this was the case: I tried to do my best to mention where I got these example (give credit where credit is due).
+# Notes on Zshell
 
-# Wiki
-- [Click here for my code Wiki](https://github.com/mayelespino/code/wiki)
-
-# Notes Index
-- [angular](angular/notes.md)
-- [bash](bash/notes.md)
-- [notebook:index](general/index.md)
-- [go](go/notes.md)
-- [javascript](javascript/notes.md)
-- [lua](lua/notes.md)
-- [objective-c](objective-c/notes.md)
-- [Python](python/notes.md)
-- [SaltStack](saltStack/readme.md)
-- [sklearn](sklearn/notes.md)
-- [Unix](unix/readme.md)
-- [Zsh](zsh/notes.md)
+## Links
+- https://www-s.acm.illinois.edu/workshops/zsh/prompt/escapes.html
+- https://www-s.acm.illinois.edu/workshops/zsh/alias.html
+- https://stackoverflow.com/questions/689765/how-can-i-change-the-color-of-my-prompt-in-zsh-different-from-normal-text
+- http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html
+- http://www.nparikh.org/unix/prompt.php
+- https://superuser.com/questions/1008430/zsh-in-iterm2-why-my-prompt-can-only-use-8-colors
+- http://www.commandlinefu.com/commands/view/5876/show-numerical-values-for-each-of-the-256-colors-in-zsh
+- https://github.com/gawin/bash-colors-256
