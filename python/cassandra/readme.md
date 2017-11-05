@@ -2,35 +2,24 @@
 
 
 ## creating a keyspace and table
+- [create keyspace](https://docs.datastax.com/en/cql/3.1/cql/cql_using/example_creating_ks_t.html)
 ```
-CREATE KEYSPACE Excelsior WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
-
-
-CREATE TABLE Excelsior.mytable (
-myid uuid,
-mykey text,
-myvalue text,
-PRIMARY KEY ((myid), mykey)
-);
-
-CREATE INDEX ON Excelsior.users (mykey);
-
-insert into mytable (myid, mykey, myvalue) values (now(), 'name', 'amadeus');     
+cqlsh> CREATE KEYSPACE demodb WITH REPLICATION = { 'class' : 'NetworkTopologyStrategy', 'datacenter1' : 3 };
+```
+- [create a table](https://docs.datastax.com/en/cql/3.1/cql/cql_using/create_table_t.html)
+```
+CREATE TABLE users (
+  user_name varchar,
+  password varchar,
+  gender varchar,
+  session_token varchar,
+  state varchar,
+  birth_year bigint,
+  PRIMARY KEY (user_name));
 ```
 
-```
-CREATE TABLE excelsior.table2 (
-key text,
-value text,
-PRIMARY KEY (key)
-);
-
-insert into table (key, value) values ('name', 'amadeus');
-
-COPY table2 (key, value) FROM 'mytable.csv';
-COPY table2 (key, value) TO 'table2.csv';
-```
 # links
 https://datastax.github.io/python-driver/getting_started.html
 https://docs.datastax.com/en/cql/3.3/cql/cql_reference/copy_r.html
 https://www.tutorialspoint.com/cassandra/cassandra_data_model.htm
+- [datastax getting started](https://datastax.github.io/python-driver/getting_started.html)
