@@ -1,1 +1,1 @@
-/Users/mayelespino/Repos/code/rustone/target/debug/rustone: /Users/mayelespino/Repos/code/rustone/src/main.rs
+/Users/mayelespino/Repos/code/rust/rustone/target/debug/rustone: /Users/mayelespino/Repos/code/rust/rustone/src/main.rs
