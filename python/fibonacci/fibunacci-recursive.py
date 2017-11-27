@@ -1,3 +1,4 @@
+import sys
 
 def fibonacci(n):
 	if n < 2:
@@ -5,10 +6,10 @@ def fibonacci(n):
 	else:
 		return(fibonacci(n-1)+fibonacci(n-2))
 
-print (fibonacci(10))
-try:
-    aNumber=int(raw_input('Give me a number:'))
-except ValueError:
-    print("Not a number")
+if len(sys.argv) < 2:
+	print("Please provide a number.")
+	exit()
 
-print fibonacci(aNumber)
+target = int(sys.argv[1])
+print(target)
+print (fibonacci(target))
