@@ -1,4 +1,4 @@
-extern crate adder;
+extern crate t04;
 
 #[test]
 fn it_adds_two() {
