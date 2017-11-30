@@ -1,0 +1,1 @@
+/root/code/rust/communicator/target/debug/communicator-ebb1ec6250ae1d3e: /root/code/rust/communicator/src/lib.rs /root/code/rust/communicator/src/network/mod.rs /root/code/rust/communicator/src/main.rs /root/code/rust/communicator/src/network/server.rs /root/code/rust/communicator/src/client.rs
