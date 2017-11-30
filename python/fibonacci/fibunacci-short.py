@@ -1,9 +1,15 @@
-#!/usr/local/bin/python3
 
-target = 10
+def fibunacci(target):
+    fibb, prev = 0,1
+    for x in range(target):
+        fibb, prev = prev+fibb, fibb
+    return(fibb)
 
-fibb, prev = 0,1
-for x in xrange(target):
-    fibb, prev = prev+fibb, fibb
+def main():
+    print("Fibunnaci 10.")
+    print(fibunacci(10))
+    print("Fibunnaci 100.")
+    print(fibunacci(100))
 
-print(fibb)
+
+if __name__ == '__main__': main()
