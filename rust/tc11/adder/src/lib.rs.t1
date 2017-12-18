@@ -1,0 +1,12 @@
+#[cfg(test)]
+mod tests {
+    #[test]
+	fn exploration() {
+    }
+
+    #[test]
+    fn another() {
+        panic!("Make this test fail");
+    }
+
+}
