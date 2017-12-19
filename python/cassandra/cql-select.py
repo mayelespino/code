@@ -1,6 +1,6 @@
 import cql
-con = cql.connect('159.203.107.80', 9160,  'Excelsior', cql_version='3.0.0')
+con = cql.connect('system_schema', 9160,  '', cql_version='3.0.0')
 print ("Connected!")
 cursor = con.cursor()
-CQLString = "select * from mytable;"
+CQLString = "select * from tables;"
 cursor.execute(CQLString)
