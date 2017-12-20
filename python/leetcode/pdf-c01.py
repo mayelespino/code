@@ -13,7 +13,7 @@ def generate_array(length, range_end):
         print("{}:{}".format(value, key))
     return(int_map)
 
-def find_target_factors(int_map, target):
+def two_sum(int_map, target):
     number_list = int_map.keys()
     for key,value in int_map.items():
         if key >= target:
@@ -25,7 +25,11 @@ def find_target_factors(int_map, target):
 
 def main():
     int_map = generate_array(100, 9)
-    print(find_target_factors(int_map, 10))
-
+    target = 10
+    index1, index2 = two_sum(int_map, target)
+    print("map[{}] + map[{}] = {}".format(index1, index2, target))
+    print("{} + {} = {}".format(int_map[index1], int_map[index2], target))
+    assert(index1 < index2), "index1 < index2"
+    assert(int_map[index1] + int_map[index2] == target), "two numbers selected do not equate to target"
 
 if __name__ == '__main__': main()
