@@ -27,7 +27,7 @@ docker run --name cassandra -p 9042:9042 -p 9160:9160 -d cassandra
 ```
 docker exec -it cassandra bash
 ```
-
+## some cqlsh usefull commands
 ```
 DESCRIBE commands    Example    Description
 DESCRIBE CLUSTER    DESCRIBE CLUSTER;    Output information about the connected Cassandra cluster. Cluster name, partitioner, and snitch are output. For non-system keyspace, the endpoint-range ownership information is also shown.
@@ -40,7 +40,8 @@ DESCRIBE INDEX <index_name>    DESCRIBE INDEX team_entry;    Output CQL command 
 DESCRIBE TYPES         Output list of all user-defined types in the current keyspace.
 DESCRIBE TYPE <type_name>    DESCRIBE TYPE basic_info;    Output CQL command for the given user-defined type. This CQL command can be used to recreate the index.
 ```
-
+# Notes
+- there is a ~/code/cassandra directory which has file you may be interested in, for example some *.cql files which can be run from cqlsh
 ## 
 # links
 https://datastax.github.io/python-driver/getting_started.html
