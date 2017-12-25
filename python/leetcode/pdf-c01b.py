@@ -31,20 +31,19 @@ def bin_search(list, target):
     else:
          return(location)
 
-def two_sum(int_list, target, start=1):
-    index1, index2, complement = 0, 0, 0
-    for idx in range(start,len(int_list)):
+def two_sum(int_list, target):
+    index1, index2, complement = 0, 0, 0;
+
+    for idx in range(1,len(int_list)):
         if int_list[idx] < target:
             index1 = idx
-            complement = target - int_list[idx]
             break
 
+    complement = target - int_list[idx]
     index2 = bin_search(int_list, complement)
-    if index2 != 0:
-      return (index1, index2)
-    else:
-        start += 1
-        two_sum(int_list, target, start)
+    if index2 == 0:
+        raise LookupError("Did not find complement :{}, please try again.".format(complement))
+    return (index1, index2)
 
 def main():
     int_list = generate_array(100)
@@ -56,4 +55,4 @@ def main():
     assert(index1 < index2), "index1 < index2"
     assert(int_list[index1] + int_list[index2] == target), "two numbers selected do not equate to target"
 
-if __name__ == '__main__': main()
+if __name__ == "__main__": main()
