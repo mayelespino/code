@@ -12,16 +12,24 @@ def isValidPalindrome(_phrase):
         return(True)
 
     valid_characters = string.ascii_lowercase + "1234567890"
-    new_string = ""
-    for character in _phrase:
-        char = character.lower()
-        if char in valid_characters:
-            new_string += char
-    reverse_string = new_string[::-1]
-    if new_string == reverse_string:
-        return(True)
-    else:
-        return(False)
+
+    _phrase = list(_phrase.lower())
+    while len(_phrase) > 1:
+        b_char = _phrase.pop()
+        while b_char not in valid_characters and len(_phrase) > 1:
+            b_char = _phrase.pop()
+
+        f_char = _phrase.pop(0)
+        while f_char not in valid_characters and len(_phrase) > 1:
+            f_char = _phrase.pop(0)
+
+        if len(_phrase) == 0:
+            return(True)
+
+        if b_char != f_char :
+            return(False)
+    return(True)
+
 
 def main():
     phrase = "A man, a plan, a canal: Panama"
@@ -38,5 +46,11 @@ def main():
     print(phrase)
     print(isValidPalindrome(phrase))
     assert(isValidPalindrome(phrase) == True)
+
+    phrase = "abccba"
+    print(phrase)
+    print(isValidPalindrome(phrase))
+    assert(isValidPalindrome(phrase) == True)
+
 
 if __name__ == "__main__": main()
