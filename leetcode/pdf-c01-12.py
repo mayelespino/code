@@ -11,37 +11,21 @@ def generate_array_with_gaps():
             array.remove(gap)
     return(array)
 
-
-    # for idx in range(1, len(missing_list)-1):
-    #     if missing_list[idx] != missing_list[idx+1]-1 or missing_list[idx-1] != missing_list[idx]-1:
-    #         result_list.append("{}".format(missing_list[idx]))
-    #         result_string += ",{}".format(missing_list[idx])
-    #     else:
-    #         result_list.append("->")
-    #         result_string += "->"
-
-
-def find_missing_ranges(list, size):
-    original_set = set(list)
-    full_set = set([i for i in range(size)])
-    missing_set = full_set - original_set
-    missing_list = [i for i in missing_set]
-    print(missing_list)
+def find_missing_ranges(list):
     result_list = []
-    result_list.append("{}|".format(missing_list[0]))
-    for idx in range(1, len(missing_list)-1):
-        left_delta = (missing_list[idx] - missing_list[idx-1])
-        right_delta = (missing_list[idx+1] - missing_list[idx])
-        if left_delta == 1:
-            result_list.append("{}".format(missing_list[idx]))
-        elif left_delta > 1:
-            result_list.append("{}->{}".format(missing_list[idx]+1, missing_list[idx+1]-1))
+    for idx in range(len(list)):
+        if idx == 0 and list[0] == 1:
+            result_list.append("0")
+        elif idx == 0 and list[0] >= 2:
+            result_list.append("0->{}".format(list[idx] - 1))
+        elif idx > 0 and (list[idx] - list[idx-1]) > 2:
+            result_list.append("{}->{}".format(list[idx-1] + 1, list[idx] - 1))
     print(result_list)
 
 
 def main():
     original_list = generate_array_with_gaps()
-    #print(original_list)
-    find_missing_ranges(original_list, 100)
+    print(original_list)
+    find_missing_ranges(original_list)
 
 if __name__ == "__main__": main()
