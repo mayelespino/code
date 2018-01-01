@@ -8,36 +8,44 @@ def is_palindrom_start(in_list, position):
     else:
         return False
 
-def find_length_of_palindrom(in_list, position):
-    left = position
-    right = len(in_list) - position -1
-    if left == right:
-        max_length = left
-    elif left > right:
-        max_length = right
-    else:
-        max_length = left
-    return(max_length)
+# def find_length_of_palindrom(in_list, position):
+#     left = position
+#     right = len(in_list) - position -1
+#     if left == right:
+#         max_length = left
+#     elif left > right:
+#         max_length = right
+#     else:
+#         max_length = left
+#     return(max_length)
 
 def longest_palindrom(in_string):
     max_palindrom = {}
     for idx in range(1,len(in_string)-1):
         is_it = is_palindrom_start(in_string, idx)
-        # print("{}:{}".format(idx, is_it))
         if is_it is True:
-            length = find_length_of_palindrom(in_string, idx)
-            if length ==  1:
-                tmp_string = in_string[idx - length : idx + length + 1]
-            else:
-                pass
+            tmp_string = in_string[idx]
+            offset = 1
+            while (idx - offset) >= 0 and (idx + offset) < len(in_string):
+                if in_string[idx] == in_string[idx - offset]:
+                    tmp_string = in_string[idx - offset] + tmp_string
+                if in_string[idx] == in_string[idx + offset]:
+                    tmp_string = tmp_string + in_string[idx + offset]
+                if in_string[idx - 1] == in_string[idx + offset]:
+                    tmp_string = in_string[idx - offset] + tmp_string + in_string[idx + offset]
+                offset  +=1
             max_palindrom[idx] = tmp_string
 
+    max_len_palindrom = ""
     for k,v in max_palindrom.items():
-            print("{}:{}".format(k, v))
+            #print("{}:{}".format(k, v))
+            if len(v) >= len(max_len_palindrom):
+                max_len_palindrom = v
+    return (max_len_palindrom)
 
 
 def main():
     s1 = "abacdgfdcaba"
-    longest_palindrom(s1)
+    print(longest_palindrom(s1))
 
 if __name__ == "__main__": main()
