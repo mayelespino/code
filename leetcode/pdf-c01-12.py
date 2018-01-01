@@ -11,17 +11,24 @@ def generate_array_with_gaps():
             array.remove(gap)
     return(array)
 
+
 def find_missing_ranges(list):
     result_list = []
-    for idx in range(len(list)):
-        if idx == 0 and list[0] == 1:
-            result_list.append("0")
-        elif idx == 0 and list[0] >= 2:
-            result_list.append("0->{}".format(list[idx] - 1))
-        elif idx > 0 and (list[idx] - list[idx-1]) > 2:
+    if list[0] == 1:
+        result_list.append("0")
+    elif list[0] >= 2:
+        result_list.append("0->{}".format(list[idx] - 1))
+
+    for idx in range(1,len(list)):
+        if (list[idx] - list[idx-1]) > 2:
             result_list.append("{}->{}".format(list[idx-1] + 1, list[idx] - 1))
-        elif idx > 0 and (list[idx] - list[idx-1]) == 2:
+        elif (list[idx] - list[idx-1]) == 2:
             result_list.append("{}".format(list[idx] - 1))
+            
+    if list[-1] == 98:
+        result_list.append("99")
+    elif list[-1] < 98:
+        result_list.append("{}->99".format(list[-1] + 1))
     print(result_list)
 
 
