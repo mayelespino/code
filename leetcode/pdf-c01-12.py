@@ -20,6 +20,8 @@ def find_missing_ranges(list):
             result_list.append("0->{}".format(list[idx] - 1))
         elif idx > 0 and (list[idx] - list[idx-1]) > 2:
             result_list.append("{}->{}".format(list[idx-1] + 1, list[idx] - 1))
+        elif idx > 0 and (list[idx] - list[idx-1]) == 2:
+            result_list.append("{}".format(list[idx] - 1))
     print(result_list)
 
 
