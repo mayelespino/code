@@ -19,6 +19,7 @@ def is_palindrom_start(in_list, position):
 #         max_length = left
 #     return(max_length)
 
+
 def longest_palindrom(in_string):
     max_palindrom = {}
     for idx in range(1,len(in_string)-1):
@@ -43,9 +44,20 @@ def longest_palindrom(in_string):
                 max_len_palindrom = v
     return (max_len_palindrom)
 
-
 def main():
     s1 = "abacdgfdcaba"
-    print(longest_palindrom(s1))
+    p1 = longest_palindrom(s1)
+    print(p1)
+    assert(p1 == "aba")
+
+    s1 = "aacdgfdcaba"
+    p1 = longest_palindrom(s1)
+    print(p1)
+    assert(p1 == "aba")
+
+    s1 = "aacdgfdcaa"
+    p1 = longest_palindrom(s1)
+    print(p1)
+    assert(p1 == "aa")
 
 if __name__ == "__main__": main()
