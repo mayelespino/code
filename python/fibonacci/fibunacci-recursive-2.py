@@ -1,17 +1,17 @@
-import sys
 
-def fibonacci(n):
+def fibonacci(n, memory):
 	if n < 2:
 			return n
-	else:
-		one = fibonacci(n-1)
-		two = fibonacci(n-2)
-		return(one + two)
+	elif memory[n] != 0:
+		return memory[n]
 
-if len(sys.argv) < 2:
-	print("Please provide a number.")
-	exit()
+	one = fibonacci(n-1, memory)
+	two = fibonacci(n-2, memory)
+	memory[n] = one + two
+	return(one + two)
 
-target = int(sys.argv[1])
+target=100
+memory = [0] * (target + 1)
 print(target)
-print (fibonacci(target))
+print (fibonacci(target, memory))
+#print(memory)

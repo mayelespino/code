@@ -13,11 +13,12 @@ def fibonacci(n):
     # perfect integer answers. 
     return round(value,9)
 
-print "f(10)"
-print fibonacci(10)
-try:
-    aNumber=int(raw_input('Give me a number:'))
-except ValueError:
-    print "Not a number"
+target = 100
+print(target)
+print (fibonacci(target))
+# try:
+#     aNumber=int(raw_input('Give me a number:'))
+# except ValueError:
+#     print ("Not a number"
 
-print fibonacci(aNumber)
+#print fibonacci(aNumber)
