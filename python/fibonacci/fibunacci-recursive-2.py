@@ -1,7 +1,7 @@
 
 def fibonacci(n, memory):
 	if n < 2:
-			return n
+		return n
 	elif memory[n] != 0:
 		return memory[n]
 
