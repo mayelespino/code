@@ -1,6 +1,6 @@
 # Notes
 - [General](https://github.com/mayelespino/code/tree/master/general)
-# Code practice 
+# Code and interview practice 
 - [codebyte](https://coderbyte.com/member/?promo=octpromo5578) 
 - [Educative](https://www.educative.io) 
 - [Codewars](https://www.codewars.com) 
@@ -18,16 +18,19 @@
 - [Ideone](https://ideone.com) is an online compiler and debugging tool which allows youto compile source code and execute it online in more than 60 programming languages
 - [exercism](https://github.com/exercism)
 - [codefights](https://codefights.com/)
+- [Interview Cake](https://www.interviewcake.com)
+- [Pramp](https://www.pramp.com/#/)
 
 # Tutorials and training classes
 - [Tree house](https://teamtreehouse.com/subscribe/plans?trial=yes)
 - [Cursera](https://www.coursera.org)
 - [lyda](https://www.lynda.com)
 - [skillshare](https://www.skillshare.com)
+- [linked-in learning]()
 
 # Notebook
 Here I keep my notes in general CS topics.
 [Index](https://github.com/mayelespino/code/tree/master/general/index.md)
 
-# Preparing for interviews
+# Preparing for interviews (videos)
 - [videos stanford](http://theory.stanford.edu/~tim/videos.html)
