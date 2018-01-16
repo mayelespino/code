@@ -34,3 +34,6 @@ Here I keep my notes in general CS topics.
 
 # Preparing for interviews (videos)
 - [videos stanford](http://theory.stanford.edu/~tim/videos.html)
+
+# Tech blogs
+- [NetFlix](https://medium.com/netflix-techblog)
