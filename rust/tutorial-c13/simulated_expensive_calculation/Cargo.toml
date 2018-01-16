@@ -1,0 +1,6 @@
+[package]
+name = "simulated_expensive_calculation"
+version = "0.1.0"
+authors = ["Mayel Espino <mayel.espino@gmail.com>"]
+
+[dependencies]

@@ -1,0 +1,4 @@
+[root]
+name = "simulated_expensive_calculation"
+version = "0.1.0"
+
