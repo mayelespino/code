@@ -34,6 +34,9 @@ Here I keep my notes in general CS topics.
 
 # Preparing for interviews (videos)
 - [videos stanford](http://theory.stanford.edu/~tim/videos.html)
+- [codementor](https://www.codementor.io)
+- [gainlo](http://www.gainlo.co/#!/)
+- [interviewing.io](https://interviewing.io)
 
 # Tech blogs
 - [NetFlix](https://medium.com/netflix-techblog)
