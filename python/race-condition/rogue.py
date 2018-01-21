@@ -1,3 +1,8 @@
+#
+# Simple program to ilustrate a race condition.
+# for example start one instance wit 5 and 
+# another instance with -5 
+#
 import time, sys
 
 def read_file():
