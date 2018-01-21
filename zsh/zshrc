@@ -42,6 +42,7 @@ alias c='clear'
 alias gh='cd /x/local/maespino/githome/gimp'
 alias ldr='ls -AF *|grep \/'
 alias mp='ps -alumaespino | grep -v tcs| grep -v bash | grep -v ssh | grep -v grep'
+alias push='git a;git c "_";git push'
 #
 alias d='pushd .'
 #
@@ -67,34 +68,6 @@ function lk
     ls | grep -i $1
 }
 
-# Code repo check in
-function cci
-{
-    cd ~/Repos/code
-    git add .
-    if [ -z "${1}" ]; then
-        git commit -m "update"
-    else
-        git commit -m "${1}"
-    fi
-    git push
-    cd -
-}
-
-# Raspberry pi repo check in
-function rpci
-{
-    cd ~/Repos/raspberry-pi
-    git add .
-    if [ -z "${1}" ]; then
-        git commit -m "update"
-    else
-        git commit -m "${1}"
-    fi
-    git push
-    cd -
-}
-
 # Push all repos (add, commit, push)
 function pall
 {
@@ -102,7 +75,7 @@ function pall
         echo ">>> $d <<<"
         cd $d
         git add .
-        git commit -m "update"
+        git commit -m "_"
         git push
     done
     cd

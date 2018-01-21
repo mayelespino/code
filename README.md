@@ -40,3 +40,6 @@ Here I keep my notes in general CS topics.
 
 # Tech blogs
 - [NetFlix](https://medium.com/netflix-techblog)
+
+# Groups and associations
+- [shpe](http://shpe-sv.org/about/)
