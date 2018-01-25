@@ -1,5 +1,8 @@
-# Notes
+# Notebook
+Here I keep my notes in general CS topics.
+- [Index](https://github.com/mayelespino/code/tree/master/general/index.md)
 - [General](https://github.com/mayelespino/code/tree/master/general)
+
 # Code and interview practice 
 - [codebyte](https://coderbyte.com/member/?promo=octpromo5578) 
 - [Educative](https://www.educative.io) 
@@ -32,7 +35,7 @@
 Here I keep my notes in general CS topics.
 [Index](https://github.com/mayelespino/code/tree/master/general/index.md)
 
-# Preparing for interviews (videos)
+# Preparing for interviews and mock interviews
 - [videos stanford](http://theory.stanford.edu/~tim/videos.html)
 - [codementor](https://www.codementor.io)
 - [gainlo](http://www.gainlo.co/#!/)
@@ -43,3 +46,6 @@ Here I keep my notes in general CS topics.
 
 # Groups and associations
 - [shpe](http://shpe-sv.org/about/)
+
+# Tutorials and help with code questions
+- [codementor](https://www.codementor.io)
