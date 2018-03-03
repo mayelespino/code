@@ -23,13 +23,23 @@ Here I keep my notes in general CS topics.
 - [codefights](https://codefights.com/)
 - [Interview Cake](https://www.interviewcake.com)
 
-# Tutorials and training classes
+# Tutorials and training classes (Coding)
 - [Tree house](https://teamtreehouse.com/subscribe/plans?trial=yes)
 - [Cursera](https://www.coursera.org)
-- [lyda](https://www.lynda.com)
-- [skillshare](https://www.skillshare.com)
-- [linked-in learning](https://www.linkedin.com/learning/me)
-- [rosettacode.org](https://rosettacode.org/wiki/Rosetta_Code)
+- [Lyda](https://www.lynda.com)
+- [Skillshare](https://www.skillshare.com)
+- [Linked-in learning](https://www.linkedin.com/learning/me)
+- [Rosettacode.org](https://rosettacode.org/wiki/Rosetta_Code)
+- [Udemy](https://www.udemy.com)
+- [Edx](https://www.edx.org)
+- [Alison](https://alison.com)
+- [Future learn](https://www.futurelearn.com)
+- [tuts+](https://tutsplus.com)
+## For pay
+- [Udacity] (https://www.udacity.com)
+# Tutorials and other educational sites
+- [Open Culture](http://www.openculture.com)
+- [Open learn](http://www.open.edu/openlearn/)
 
 # Tools
 - [Ideone](https://ideone.com) is an online compiler and debugging tool which allows youto compile source code and execute it online in more than 60 programming languages

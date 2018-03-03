@@ -29,6 +29,61 @@ data class Node(val int_value: Int, var right: Node? = null, var left: Node? = n
     fun preOrder()  { print(this); left?.preOrder(); right?.preOrder() }
     fun inorder()   { left?.inorder(); print(this); right?.inorder() }
     fun postOrder() { left?.postOrder(); right?.postOrder(); print(this) }
+
+    fun dept(): Int? {
+        var dept_right: Int? = 0
+        var dept_left: Int? = 0
+        if (right != null){
+            dept_right = right?.dept()
+            if(dept_right != null) {dept_right += 1}
+         } else {
+            dept_right = 1
+        }
+
+        if (left != null){
+            dept_left = left?.dept()
+            if(dept_left != null) {dept_left += 1}
+        } else {
+                dept_left = 1
+        }
+
+        var return_value = 0
+        if(dept_left != null && dept_right != null) {
+            if (dept_left > dept_right) {
+                return_value = dept_left
+            } else {
+                return_value = dept_right
+            }
+        }
+        return (return_value)
+    }
+
+    fun isBalanced(): Boolean {
+        var dept_right: Int? = 0
+        var dept_left: Int? = 0
+
+        if (right != null){
+            dept_right = right?.dept()
+        } else {
+            dept_right = 0
+        }
+
+        if (left != null){
+            dept_left = left?.dept()
+        } else {
+            dept_left =  0
+        }
+
+        var difference = 0
+        if(dept_left != null && dept_right != null) {
+            difference = dept_left - dept_right
+        }
+
+        if( difference > 0 && difference <= 1 ) {
+            return true
+        }
+        return false
+    }
 }
 
 fun main(args: Array<String>){
@@ -47,4 +102,9 @@ fun main(args: Array<String>){
     root.inorder()
     println("\n post order")
     root.postOrder()
+    println("\n dept")
+    val right_depth = root.right?.dept()
+    val left_depth = root.left?.dept()
+    println(right_depth)
+    println(left_depth)
 }
