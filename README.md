@@ -36,7 +36,7 @@ Here I keep my notes in general CS topics.
 - [Future learn](https://www.futurelearn.com)
 - [tuts+](https://tutsplus.com)
 ## For pay
-- [Udacity] (https://www.udacity.com)
+- [Udacity](https://www.udacity.com)
 # Tutorials and other educational sites
 - [Open Culture](http://www.openculture.com)
 - [Open learn](http://www.open.edu/openlearn/)
