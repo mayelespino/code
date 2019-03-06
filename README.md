@@ -40,6 +40,8 @@ Here I keep my notes in general CS topics.
 # Tutorials and other educational sites
 - [Open Culture](http://www.openculture.com)
 - [Open learn](http://www.open.edu/openlearn/)
+- [brilliant.org](https://brilliant.org/)
+- [www.masterclass.com](https://www.masterclass.com/)
 
 # Tools
 - [Ideone](https://ideone.com) is an online compiler and debugging tool which allows youto compile source code and execute it online in more than 60 programming languages
