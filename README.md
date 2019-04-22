@@ -35,6 +35,7 @@ Here I keep my notes in general CS topics.
 - [Alison](https://alison.com)
 - [Future learn](https://www.futurelearn.com)
 - [tuts+](https://tutsplus.com)
+- [Kahn Academy](https://www.khanacademy.org)
 ## For pay
 - [Udacity](https://www.udacity.com)
 # Tutorials and other educational sites
