@@ -13,6 +13,6 @@ def coins_amount(coin_list, amount):
     return(combinations_list[amount])
 
 def main():
-    print(coins_amount([1,2,5], 12))
+    print(coins_amount([1,2,5], 5))
 
 if __name__ == "__main__": main()
