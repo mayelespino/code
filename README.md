@@ -22,7 +22,7 @@ Here I keep my notes in general CS topics.
 - [exercism.io](http://exercism.io/)
 - [codefights](https://codefights.com/)
 - [Interview Cake](https://www.interviewcake.com)
-
+- [codementor](https://www.codementor.io)
 # Tutorials and training classes (Coding)
 - [Tree house](https://teamtreehouse.com/subscribe/plans?trial=yes)
 - [Cursera](https://www.coursera.org)
@@ -36,8 +36,11 @@ Here I keep my notes in general CS topics.
 - [Future learn](https://www.futurelearn.com)
 - [tuts+](https://tutsplus.com)
 - [Kahn Academy](https://www.khanacademy.org)
+- [codementor](https://www.codementor.io)
+
 ## For pay
 - [Udacity](https://www.udacity.com)
+
 # Tutorials and other educational sites
 - [Open Culture](http://www.openculture.com)
 - [Open learn](http://www.open.edu/openlearn/)
@@ -53,6 +56,10 @@ Here I keep my notes in general CS topics.
 - [gainlo](http://www.gainlo.co/#!/)
 - [interviewing.io](https://interviewing.io)
 
+
+---
+[My Resume](http://mayelespino.github.io)
+
 # Tech blogs
 - [NetFlix](https://medium.com/netflix-techblog)
 
@@ -60,4 +67,4 @@ Here I keep my notes in general CS topics.
 - [shpe](http://shpe-sv.org/about/)
 
 # Tutorials and help with code questions
-- [codementor](https://www.codementor.io)
+
