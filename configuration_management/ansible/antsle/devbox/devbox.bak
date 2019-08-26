@@ -1,0 +1,15 @@
+---
+- hosts: all
+  remote_user: root
+  tasks:
+  - name: Install languages
+    package: name={{ item }} state=present
+    with_items:
+         - python
+         - python-setuptools
+         - python-dev
+         - build-essential
+  - name: Pip install various packages
+    pip: name={{ item }} state=present
+    with_items:
+         - Flask

@@ -1,0 +1,57 @@
+---
+- hosts: all
+  remote_user: root
+  gather_facts: False
+  tasks:
+    - apt_repository:
+      repo: deb-src http://www.apache.org/dist/cassandra/debian 22x main
+      state: present
+    - apt_repository:
+      repo: deb http://www.apache.org/dist/cassandra/debian 22x main
+      state: present
+    - name: Add an apt key 1
+      command: "gpg --keyserver pgp.mit.edu --recv-keys F758CE318D77295D"
+      become: yes
+      become_user: root
+    - name: Add an apt key 1
+      command: "gpg --export --armor F758CE318D77295D | sudo apt-key add -"
+      become: yes
+      become_user: root
+    - name: Add an apt key 2
+      command: "gpg --keyserver pgp.mit.edu --recv-keys 2B5C1B00"
+      become: yes
+      become_user: root
+    - name: Add an apt key 2
+      command: "gpg --export --armor 2B5C1B00 | sudo apt-key add -"
+      become: yes
+      become_user: root
+    - name: Add an apt key 3
+      command: "gpg --keyserver pgp.mit.edu --recv-keys 0353B12C"
+      become: yes
+      become_user: root
+    - name: Add an apt key 3
+      command: "gpg --export --armor 0353B12C | sudo apt-key add -"
+      become: yes
+      become_user: root
+    - name: installing various
+      apt: name={{ item }} state=latest
+      with_items:
+        - oracle-java8-set-default
+        - cassandra
+    - name: install python 2
+      raw: test -e /usr/bin/python || (apt -y update && apt install -y python-minimal)
+    - name: Install pyton pip
+      apt: name={{ item }} state=latest
+      with_items:
+          - python-pip
+          - python-dev
+          - build-essential
+    - name: Pip install various packages
+      pip: name={{ item }} 
+      with_items:
+        - Flask
+        - requests
+        - nose
+        - cassandra-driver
+        - cqlsh
+# EOF

@@ -1,0 +1,12 @@
+---
+- hosts: droplet
+  tasks:
+    - name: install java
+      yum: state=present name=java-sdk
+      tags: java 
+    - name: install scala
+      yum: 
+        name: http://downloads.lightbend.com/scala/2.11.8/scala-2.11.8.rpm
+        state: present
+      tags: scala
+

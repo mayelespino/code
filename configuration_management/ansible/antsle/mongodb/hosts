@@ -1,0 +1,2 @@
+[all]
+myantsle.local ansible_port=22015 ansible_host=myantsle.local ansible_connection=ssh ansible_user=root
