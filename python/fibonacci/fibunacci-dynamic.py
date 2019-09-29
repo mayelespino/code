@@ -1,3 +1,4 @@
+import sys
 
 def fibonacci(n, memory):
 	if n < 2:
@@ -10,7 +11,7 @@ def fibonacci(n, memory):
 	memory[n] = one + two
 	return(one + two)
 
-target=100
+target= int(sys.argv[1])
 memory = [0] * (target + 1)
 print(target)
 print (fibonacci(target, memory))
