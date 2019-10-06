@@ -23,7 +23,9 @@ Here I keep my notes in general CS topics.
 - [codefights](https://codefights.com/)
 - [Interview Cake](https://www.interviewcake.com)
 - [codementor](https://www.codementor.io)
+
 # Tutorials and training classes (Coding)
+## Free
 - [Tree house](https://teamtreehouse.com/subscribe/plans?trial=yes)
 - [Cursera](https://www.coursera.org)
 - [Lyda](https://www.lynda.com)
@@ -49,8 +51,12 @@ Here I keep my notes in general CS topics.
 
 # Tools
 - [Ideone](https://ideone.com) is an online compiler and debugging tool which allows youto compile source code and execute it online in more than 60 programming languages
+- [Collabedit](http://collabedit.com)
 - [PiazaCloud](https://paiza.cloud/en/)
 - [AWS Cloud9](https://aws.amazon.com/cloud9/?origin=c9io)
+- [Codeshare](https://codeshare.io/)
+## Interview practice
+- [Interviewing](https://interviewing.io)
 
 # Preparing for interviews and mock interviews
 - [videos stanford](http://theory.stanford.edu/~tim/videos.html)
