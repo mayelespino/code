@@ -48,7 +48,7 @@ Here I keep my notes in general CS topics.
 - [Open learn](http://www.open.edu/openlearn/)
 - [brilliant.org](https://brilliant.org/)
 - [www.masterclass.com](https://www.masterclass.com/)
-- [grasshoper from google](https://learn.grasshopper.app)
+- [grasshopper from google](https://learn.grasshopper.app)
 
 # Tools
 - [Ideone](https://ideone.com) is an online compiler and debugging tool which allows youto compile source code and execute it online in more than 60 programming languages
