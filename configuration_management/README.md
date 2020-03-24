@@ -1,2 +1,0 @@
-# cm
-Configuration management
