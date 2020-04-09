@@ -1,0 +1,13 @@
+{
+  "people": [
+    {
+      "first_name": "john", 
+      "last_name": "smith"
+    }, 
+    {
+      "first_name": "jane", 
+      "last_name": "doe"
+    }, 
+    "{\"first_name\" : \"pete\", \"last_name\": \"pan\"}"
+  ]
+}
