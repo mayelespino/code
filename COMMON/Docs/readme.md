@@ -35,3 +35,7 @@ Sun Oct 24 21:25:27 2021    report.out
 report.out% ^D
 Goodbye.
 ```
+
+# Big-O module
+
+[big-o module](https://pypi.org/project/big-O/)

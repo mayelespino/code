@@ -3,7 +3,7 @@
 import threading
 import time
 
-exitFlag = 0
+#exitFlag = 0
 
 class myThread (threading.Thread):
     def __init__(self, threadID, name, counter):
@@ -18,8 +18,8 @@ class myThread (threading.Thread):
 
 def print_time(threadName, delay, counter):
     while counter:
-        if exitFlag:
-            thread.exit()
+ #       if exitFlag:
+ #           thread.exit()
         time.sleep(delay)
         print "%s: %s" % (threadName, time.ctime(time.time()))
         counter -= 1
