@@ -2,20 +2,32 @@ from random import randint
 from threading import Thread
 
 
+# class ThreadWithReturnValue(Thread):
+#     def __init__(self, group=None, target=None, name=None, args=(), kwargs={}, Verbose=None):
+#         Thread.__init__(self, group, target, name, args, kwargs, Verbose)
+#         self._return = None
+#     def run(self):
+#         if self._Thread__target is not None:
+#             self._return = self._Thread__target(*self._Thread__args,
+#                                                 **self._Thread__kwargs)
+#     def join(self):
+#         Thread.join(self)
+#         return self._return
+
+
 class ThreadWithReturnValue(Thread):
-    def __init__(self, group=None, target=None, name=None,
-                 args=(), kwargs={}, Verbose=None):
-        Thread.__init__(self, group, target, name, args, kwargs, Verbose)
+    def __init__(self, group=None, target=None, name=None, args=(), kwargs={}, Verbose=None):
+        Thread.__init__(self, group, target, name, args, kwargs)
         self._return = None
+
     def run(self):
-        if self._Thread__target is not None:
-            self._return = self._Thread__target(*self._Thread__args,
-                                                **self._Thread__kwargs)
-    def join(self):
-        Thread.join(self)
+        if self._target is not None:
+            self._return = self._target(*self._args, **self._kwargs)
+
+    def join(self, *args):
+        Thread.join(self, *args)
         return self._return
-
-
+# Exceptions
 
 def mergeSort(list):    
     if len(list) < 2:
@@ -53,10 +65,11 @@ def mergeSort(list):
 if __name__ == "__main__":
     #aList = [5, 334, 1, 3, 5, 78, 90, 565, 12, 54, 99, 4, 2]
     aList = []
-    for i in range(25):
-        aList.append(randint(0,500))
+    for i in range(999):
+        aList.append(randint(0,5000))
 
     print(aList)
+    print("-\n\n\n")
     print(mergeSort(aList))
 
 #

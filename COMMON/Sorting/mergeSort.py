@@ -31,8 +31,9 @@ def mergeSort(list):
 if __name__ == "__main__":
     #aList = [5, 334, 1, 3, 5, 78, 90, 565, 12, 54, 99, 4, 2]
     aList = []
-    for i in range(25):
-        aList.append(randint(0,500))
+    for i in range(999):
+        aList.append(randint(0,5000))
 
     print(aList)
+    print("-\n\n\n")
     print(mergeSort(aList))
