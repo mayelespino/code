@@ -12,7 +12,7 @@ import (
 // make asynchronous later on
 func compute(value int, values chan int) {
     //rand_value := rand.Intn(10)
-    fmt.Println("Calculated Random Value: {}", rand_value)
+    //fmt.Println("Calculated Random Value: {}", rand_value)
     for i := 0; i < value; i++ {
         time.Sleep(time.Second)
         values <- rand.Intn(10)
