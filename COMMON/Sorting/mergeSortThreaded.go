@@ -11,8 +11,6 @@ import (
 // a very simple function that we'll
 // make asynchronous later on
 func compute(value int, values chan int) {
-    //rand_value := rand.Intn(10)
-    //fmt.Println("Calculated Random Value: {}", rand_value)
     for i := 0; i < value; i++ {
         time.Sleep(time.Second)
         values <- rand.Intn(10)
@@ -22,22 +20,20 @@ func compute(value int, values chan int) {
 
 func main() {
 
-    fmt.Println("Goroutine Tutorial")
-    values := make(chan int, 10)
-    defer close(values)
+    fmt.Println("Goroutine Tutorial: 2 ")
+    right_values := make(chan int, 10)
+    defer close(right_values)
+    left_values := make(chan int, 10)
+    defer close(left_values)
   
     // sequential execution of our compute function
-    go compute(10, values)
-    go compute(10, values)
+    go compute(10, right_values)
+    go compute(10, left_values)
 
-    value := <-values
-    fmt.Println("First from channel: {}", value)
-    value = <-values
-    fmt.Println("Second from channel: {}", value)
-
-    // we scan fmt for input and print that to our console
-    // var input string
-    // fmt.Scanln(&input)
+    value := <-right_values
+    fmt.Println("First from channel: ", value)
+    value = <-left_values
+    fmt.Println("Second from channel: ", value)
 
 }
 
