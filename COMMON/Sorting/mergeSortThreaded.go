@@ -15,7 +15,7 @@ func compute(value int, values chan int) {
     fmt.Println("Calculated Random Value: {}", rand_value)
     for i := 0; i < value; i++ {
         time.Sleep(time.Second)
-        fmt.Println(i)
+        //fmt.Println(i)
     }
     values <- rand_value
 }
@@ -31,9 +31,9 @@ func main() {
     go compute(10, values)
 
     value := <-values
-    fmt.Println(value)
+    fmt.Println("First from channel: {}", value)
     value = <-values
-    fmt.Println(value)
+    fmt.Println("Second from channel: {}", value)
 
     // we scan fmt for input and print that to our console
     var input string
