@@ -32,8 +32,8 @@ func main() {
 
     value := <-values
     fmt.Println(value)
-    value := <-values
-    fmt.Println(value)
+    // value := <-values
+    // fmt.Println(value)
 
     // we scan fmt for input and print that to our console
     var input string
