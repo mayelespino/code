@@ -36,8 +36,8 @@ func main() {
     fmt.Println("Second from channel: {}", value)
 
     // we scan fmt for input and print that to our console
-    var input string
-    fmt.Scanln(&input)
+    // var input string
+    // fmt.Scanln(&input)
 
 }
 
