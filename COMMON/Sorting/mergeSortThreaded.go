@@ -36,7 +36,7 @@ func main() {
     }
 
     for i := 0; i < 10; i++ {
-        value = <-left_values
+        value := <-left_values
         fmt.Println("Second from channel: ", value)
     }
 
