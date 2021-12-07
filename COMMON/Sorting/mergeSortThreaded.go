@@ -26,9 +26,11 @@ func main() {
     defer close(values)
   
     // sequential execution of our compute function
-    go compute(10)
-    go compute(10)
+    go compute(10, values)
+    go compute(10, values)
 
+    value := <-values
+    fmt.Println(value)
     value := <-values
     fmt.Println(value)
 
