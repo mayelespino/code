@@ -36,13 +36,17 @@ func mergeSort(anArray[] int, values chan int) {
 	for {
 		select {
 		case x, ok := <-leftChannel:
-			fmt.Println("leftChannel", x, ok)
-			if !ok {
-				leftChannel = nil
-			}
+			//fmt.Println("leftChannel", x, ok)
+			if ok {
+                values <- x
+			} else {
+                leftChannel = nil
+            }
 		case x, ok := <-rightChannel:
 			fmt.Println("rightChannel", x, ok)
-			if !ok {
+			if ok {
+                values <- x
+            } else {
 				rightChannel = nil
 			}
 		}
@@ -75,3 +79,4 @@ func main() {
   
 }
 
+// - https://stackoverflow.com/questions/13666253/breaking-out-of-a-select-statement-when-all-channels-are-closed
