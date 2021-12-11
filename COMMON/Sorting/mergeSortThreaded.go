@@ -20,7 +20,8 @@ func populateArray(arrayLen int) []int {
 // 
 func mergeSort(anArray[] int, values chan int) {
 	if(len(anArray) < 2){
-		return anArray
+        values <- anArray[0]
+		return 
 	}
 
 	midPoint := len(anArray)/2
@@ -45,13 +46,13 @@ func mergeSort(anArray[] int, values chan int) {
 			}
 		}
 
-		if ch == nil && ch2 == nil {
+		if leftChannel == nil && rightChannel == nil {
 			break
 		}
 	}
 
     //======
-    
+
     close(leftChannel)
     close(rightChannel)    
 }
