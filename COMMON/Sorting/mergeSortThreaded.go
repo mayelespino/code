@@ -23,7 +23,7 @@ func compute(value int, values chan int) {
         time.Sleep(time.Second)
         values <- rand.Intn(value)
     }
-    close(values)    
+    //close(values)    
 }
 
 func main() {
@@ -41,11 +41,12 @@ func main() {
     for value:= range right_values {
         fmt.Println("Right value: ", value)
     }
+    close(right_values)
 
     for value:= range left_values {
         fmt.Println("Left value: ", value)
     }
-
+    close(right_values)
 
 }
 
