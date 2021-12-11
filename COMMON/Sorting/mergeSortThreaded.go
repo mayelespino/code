@@ -46,6 +46,7 @@ func main() {
     for value:= range left_values {
         fmt.Println("Left value: ", value)
     }
+    close(right_values)
     close(left_values)
 
 }
