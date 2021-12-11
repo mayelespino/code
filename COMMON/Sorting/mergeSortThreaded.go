@@ -11,9 +11,9 @@ import (
 // a very simple function that we'll
 // make asynchronous later on
 func compute(value int, values chan int) {
-    for i := 0; i < value; i++ {
+    for i := 0; i < 5; i++ {
         time.Sleep(time.Second)
-        values <- rand.Intn(10)
+        values <- rand.Intn(value)
     }
     
 }
@@ -21,14 +21,14 @@ func compute(value int, values chan int) {
 func main() {
 
     fmt.Println("Goroutine Tutorial: 2 ")
-    right_values := make(chan int, 10)
+    right_values := make(chan int, 1)
     defer close(right_values)
-    left_values := make(chan int, 10)
+    left_values := make(chan int, 1)
     defer close(left_values)
   
     // sequential execution of our compute function
-    go compute(10, right_values)
-    go compute(10, left_values)
+    go compute(9, right_values)
+    go compute(90, left_values)
 
     for i := 0; i < 10; i++ {
         value := <-right_values
