@@ -36,17 +36,19 @@ func mergeSort(anArray[] int, values chan int) {
 	for {
 		select {
 		case x, ok := <-leftChannel:
-			//fmt.Println("leftChannel", x, ok)
+			fmt.Println("leftChannel", x, ok)
 			if ok {
                 values <- x
 			} else {
+                close(leftChannel)
                 leftChannel = nil
             }
 		case x, ok := <-rightChannel:
-			//fmt.Println("rightChannel", x, ok)
+			fmt.Println("rightChannel", x, ok)
 			if ok {
                 values <- x
             } else {
+                close(rightChannel)
 				rightChannel = nil
 			}
 		}
@@ -58,8 +60,8 @@ func mergeSort(anArray[] int, values chan int) {
 
     //======
 
-    close(leftChannel)
-    close(rightChannel)    
+    //close(leftChannel)
+    //close(rightChannel)    
     close(values)
 }
 
