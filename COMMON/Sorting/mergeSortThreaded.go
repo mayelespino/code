@@ -21,6 +21,7 @@ func populateArray(arrayLen int) []int {
 func mergeSort(anArray[] int, values chan int) {
 	if(len(anArray) < 2){
         values <- anArray[0]
+        close(values)
 		return 
 	}
 
