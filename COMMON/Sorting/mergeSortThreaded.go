@@ -30,12 +30,12 @@ func main() {
     go compute(9, right_values)
     go compute(90, left_values)
 
-    for i := 0; i < 10; i++ {
+    for i := 0; i < 5; i++ {
         value := <-right_values
         fmt.Println("First from channel: ", value)
     }
 
-    for i := 0; i < 10; i++ {
+    for i := 0; i < 5; i++ {
         value := <-left_values
         fmt.Println("Second from channel: ", value)
     }
