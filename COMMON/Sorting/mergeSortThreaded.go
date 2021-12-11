@@ -18,9 +18,8 @@ func populateArray(arrayLen int) []int {
 }
 
 // 
-func compute(anArray[] int, values chan int) {
+func mergeSort(anArray[] int, values chan int) {
     for i := 0; i < 10; i++ {
-        //time.Sleep(time.Second)
         values <- anArray[i]
     }
     close(values)    
@@ -28,31 +27,18 @@ func compute(anArray[] int, values chan int) {
 
 func main() {
 
-    fmt.Println("Goroutine Tutorial: 2 ")
+    fmt.Println("mergeSortThreaded.go ")
 
     anArray := populateArray(10)
 	fmt.Println(anArray)
-	//anArray = mergeSort(anArray)
-	//fmt.Println(anArray)
 
-    right_values := make(chan int, 1)
-    //defer close(right_values)
-    //left_values := make(chan int, 1)
-    //defer close(left_values)
-  
-    // sequential execution of our compute function
-    go compute(anArray, right_values)
-    //go compute(90, left_values)
+    aChannel := make(chan int, 1)
 
-    for value:= range right_values {
+    go mergeSort(anArray, aChannel)
+
+    for value := range aChannel {
         fmt.Println("Right value: ", value)
     }
   
-    //for value:= range left_values {
-    //    fmt.Println("Left value: ", value)
-    //}
-    //close(right_values)
-    //close(left_values)
-
 }
 
