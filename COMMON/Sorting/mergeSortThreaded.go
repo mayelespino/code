@@ -19,10 +19,41 @@ func populateArray(arrayLen int) []int {
 
 // 
 func mergeSort(anArray[] int, values chan int) {
-    for i := 0; i < 10; i++ {
-        values <- anArray[i]
-    }
-    close(values)    
+	if(len(anArray) < 2){
+		return anArray
+	}
+
+	midPoint := len(anArray)/2
+    leftChannel := make(chan int, 1)
+    rightChannel := make(chan int, 1)
+	go mergeSort(anArray[:midPoint], leftChannel)
+	go mergeSort(anArray[midPoint:], rightChannel)
+
+    //======
+
+	for {
+		select {
+		case x, ok := <-leftChannel:
+			fmt.Println("leftChannel", x, ok)
+			if !ok {
+				leftChannel = nil
+			}
+		case x, ok := <-rightChannel:
+			fmt.Println("rightChannel", x, ok)
+			if !ok {
+				rightChannel = nil
+			}
+		}
+
+		if ch == nil && ch2 == nil {
+			break
+		}
+	}
+
+    //======
+    
+    close(leftChannel)
+    close(rightChannel)    
 }
 
 func main() {
