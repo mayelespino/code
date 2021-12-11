@@ -8,8 +8,16 @@ import (
 )
 
 
-// a very simple function that we'll
-// make asynchronous later on
+func populateArray(arrayLen int) []int {
+	rand.Seed(time.Now().UnixNano())
+	newArray := make([]int, arrayLen)
+	for idx,_ := range newArray {
+		newArray[idx] = rand.Intn(500)
+	}
+	return newArray
+}
+
+// 
 func compute(value int, values chan int) {
     for i := 0; i < 5; i++ {
         time.Sleep(time.Second)
@@ -30,15 +38,14 @@ func main() {
     go compute(9, right_values)
     go compute(90, left_values)
 
-    for i := 0; i < 6; i++ {
-        value := <-right_values
-        fmt.Println("First from channel: ", value)
+    for value:= range right_values {
+        fmt.Println("Right value: ", value)
     }
 
-    for i := 0; i < 5; i++ {
-        value := <-left_values
-        fmt.Println("Second from channel: ", value)
+    for value:= range left_values {
+        fmt.Println("Left value: ", value)
     }
+
 
 }
 
