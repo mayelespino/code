@@ -21,7 +21,7 @@ func populateArray(arrayLen int) []int {
 func compute(anArray[] int, values chan int) {
     for i := 0; i < 10; i++ {
         //time.Sleep(time.Second)
-        values <- rand.Intn(anArray[i])
+        values <- anArray[i]
     }
     close(values)    
 }
