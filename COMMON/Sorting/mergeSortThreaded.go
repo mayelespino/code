@@ -23,7 +23,7 @@ func compute(value int, values chan int) {
         time.Sleep(time.Second)
         values <- rand.Intn(value)
     }
-    
+    close(values)    
 }
 
 func main() {
