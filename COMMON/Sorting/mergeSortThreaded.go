@@ -30,7 +30,7 @@ func main() {
     go compute(9, right_values)
     go compute(90, left_values)
 
-    for i := 0; i < 5; i++ {
+    for i := 0; i < 6; i++ {
         value := <-right_values
         fmt.Println("First from channel: ", value)
     }
