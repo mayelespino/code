@@ -39,7 +39,7 @@ func mergeSort(anArray[] int, values chan int) {
 		case x, ok := <-leftChannel:
 			//fmt.Println("leftChannel", x, ok)
 			if ok {
-                 leftVal = x
+                 leftValue = x
 			} else {
                 //close(leftChannel)
                 leftChannel = nil
@@ -47,7 +47,7 @@ func mergeSort(anArray[] int, values chan int) {
 		case x, ok := <-rightChannel:
 			//fmt.Println("rightChannel", x, ok)
 			if ok {
-                rightVal = x
+                rightValue = x
             } else {
                 //close(rightChannel)
 				rightChannel = nil
