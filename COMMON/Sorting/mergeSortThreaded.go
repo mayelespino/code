@@ -68,7 +68,7 @@ func mergeSort(anArray[] int, values chan int) {
 	}
 
     for i, number := range mergedArray {
-        values <- mergedArray
+        values <- number
     }
 
     //======
