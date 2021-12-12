@@ -69,8 +69,6 @@ func mergeSort(anArray[] int, values chan int) {
 
     //======
 
-    //close(leftChannel)
-    //close(rightChannel)    
     close(values)
 }
 
@@ -78,15 +76,16 @@ func main() {
 
     fmt.Println("mergeSortThreaded.go ")
 
-    anArray := populateArray(10)
+    anArray := populateArray(5)
 	fmt.Println(anArray)
+    fmt.Println("\n\n==\n\n")
 
     aChannel := make(chan int, 1)
 
     go mergeSort(anArray, aChannel)
 
     for value := range aChannel {
-        fmt.Println("Right value: ", value)
+        fmt.Println(value)
     }
   
 }
