@@ -79,7 +79,7 @@ func main() {
 
     fmt.Println("mergeSortThreaded.go ")
 
-    anArray := populateArray(5)
+    anArray := populateArray(999)
 	fmt.Println(anArray)
     fmt.Println("\n\n==\n\n")
 
