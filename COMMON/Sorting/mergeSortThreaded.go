@@ -12,7 +12,7 @@ func populateArray(arrayLen int) []int {
 	rand.Seed(time.Now().UnixNano())
 	newArray := make([]int, arrayLen)
 	for idx,_ := range newArray {
-		newArray[idx] = rand.Intn(500)
+		newArray[idx] = rand.Intn(1000)
 	}
 	return newArray
 }
@@ -79,7 +79,7 @@ func main() {
 
     fmt.Println("mergeSortThreaded.go ")
 
-    anArray := populateArray(999)
+    anArray := populateArray(9999)
 	fmt.Println(anArray)
     fmt.Println("\n\n==\n\n")
 
