@@ -31,44 +31,44 @@ func mergeSort(anArray[] int, values chan int) {
 	go mergeSort(anArray[:midPoint], leftChannel)
 	go mergeSort(anArray[midPoint:], rightChannel)
 
-    //======
-    leftValue := 0
-    rightValue := 0
-	for {
-		select {
-		case x, ok := <-leftChannel:
-			//fmt.Println("leftChannel", x, ok)
-			if ok {
-                 leftValue = x
-			} else {
-                //close(leftChannel)
-                leftChannel = nil
-            }
-		case x, ok := <-rightChannel:
-			//fmt.Println("rightChannel", x, ok)
-			if ok {
-                rightValue = x
-            } else {
-                //close(rightChannel)
-				rightChannel = nil
-			}
+    var firstHalf[] int
+    var secondHalf[] int
+
+    for value := range leftChannel {
+        firstHalf = append(firstHalf, value)
+    }
+
+    for value := range rightChannel {
+        secondHalf = append(secondHalf, value)
+    }
+
+    f, s := 0,0
+	var mergedArray [] int
+	for(f < firstLen && s < secondLen ){
+		if firstHalf[f] < secondHalf[s]{
+			mergedArray = append(mergedArray, firstHalf[f])
+			f += 1
+		} else {
+			mergedArray = append(mergedArray, secondHalf[s])
+			s += 1
 		}
+	}
 
-		if leftChannel == nil && rightChannel == nil {
-			break
-		}
+	for f < firstLen {
+		mergedArray = append(mergedArray, firstHalf[f])
+		f += 1
+	}
 
-        if leftValue < rightValue{
-            values <- leftValue
-            values <- rightValue
-        } else {
-            values <- rightValue
-            values <- leftValue
-        }
-	} // for
+	for s < secondLen {
+		mergedArray = append(mergedArray, secondHalf[s])
+		s += 1
+	}
 
+    for i, number := range a {
+        values <- mergedArray)
+    }
+    
     //======
-
     close(values)
 }
 
