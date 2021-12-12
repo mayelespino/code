@@ -42,6 +42,9 @@ func mergeSort(anArray[] int, values chan int) {
         secondHalf = append(secondHalf, value)
     }
 
+    firstLen := len(firstHalf)
+	secondLen := len(secondHalf)
+
     f, s := 0,0
 	var mergedArray [] int
 	for(f < firstLen && s < secondLen ){
