@@ -87,9 +87,12 @@ func main() {
 
     go mergeSort(anArray, aChannel)
 
+    var sortedArray [] int
     for value := range aChannel {
-        fmt.Println(value)
+        sortedArray = append(sortedArray, value)
     }
+	fmt.Println(sortedArray)
+    fmt.Println("\n\n==")
   
 }
 
