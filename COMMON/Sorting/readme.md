@@ -9,5 +9,4 @@ When running on a multi core machine, each thread is a nicely isolated and encas
 I found it to be an interesting exercise, with some surprises. For example on the same machine, Python starts having a few issues when the number of threads is above 999, it errors out. Instead Go can do 9999 like it is nothing, it starts to struggle at 999999, but still completes.
 
 ----
-EOF
-----
+and starts to struggle at 999999, but still completes.
