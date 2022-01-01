@@ -4,14 +4,6 @@ I am running JupyterNotebook from a container:
 ```
 docker run -p 8888:8888 jupyter/scipy-notebook
 
-I 2022-01-01 04:00:49.117 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.9/site-packages/jupyterlab
-[I 2022-01-01 04:00:49.117 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
-[I 04:00:49.122 NotebookApp] Serving notebooks from local directory: /home/jovyan
-[I 04:00:49.122 NotebookApp] Jupyter Notebook 6.4.6 is running at:
-[I 04:00:49.122 NotebookApp] http://b0d8253f349b:8888/?token=a8cd9b1ae5b339454d2045e3cec04bbffaf71c84fcec40ec
-[I 04:00:49.123 NotebookApp]  or http://127.0.0.1:8888/?token=a8cd9b1ae5b339454d2045e3cec04bbffaf71c84fcec40ec
-[I 04:00:49.123 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 04:00:49.127 NotebookApp]
 
     To access the notebook, open this file in a browser:
         file:///home/jovyan/.local/share/jupyter/runtime/nbserver-7-open.html
@@ -19,6 +11,13 @@ I 2022-01-01 04:00:49.117 LabApp] JupyterLab extension loaded from /opt/conda/li
         http://b0d8253f349b:8888/?token=a8cd9b1ae5b339454d2045e3cec04bbffaf71c84fcec40ec
      or http://127.0.0.1:8888/?token=a8cd9b1ae5b339454d2045e3cec04bbffaf71c84fcec40ec
 
+```
+make sure to copy the token, it will generate a new one each time, use it to login. Setting up the password does not take.
+
+To run while mounting a local path on to the container, so that I can save the notebooks there, use this:
+
+```
+docker run -p 8888:8888 -v /path/to/Notebooks:/home/ jupyter/scipy-notebook
 ```
 
 # Links
