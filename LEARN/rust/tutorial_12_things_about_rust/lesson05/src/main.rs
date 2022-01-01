@@ -8,7 +8,7 @@ fn main() {
     println!("x128 {}, x64 {}, x {}, y {}", x128, x64, x, y);
     // Chars
     let c = 'c';
-    let Z = 'Z';
+    let z = 'Z';
     let done = false;
-    println!("Some chars: {} {} {}", c, Z, done);
+    println!("Some chars: {} {} {}", c, z, done);
 }
