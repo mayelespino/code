@@ -20,4 +20,4 @@ def allConstruct(target, wordBank, memo):
 print(allConstruct("purple",["purp", "p", "ur", "le", "purpl"], {}))
 print(allConstruct("abcdef",["ab", "abc", "cd", "def", "abcd", "ef", "c"], {}))
 print(allConstruct("skateboard",["bo", "rd", "ate", "t", "ska", "sk", "board"], {}))
-print(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeee", ["e","ee", "eee", "eeee", "eeeee", "eeeeee"], {}))
+print(allConstruct("eeeeeeeeeeeeeeeeeeeeeeeeeeef", ["e","ee", "eee", "eeee", "eeeee", "eeeeee"], {}))
