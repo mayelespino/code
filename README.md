@@ -19,6 +19,9 @@ Here is how I have organized it:
 
 Here I keep my notes and links to many resources: [Wiki](https://github.com/mayelespino/code/wiki)
 
+# Gist
+Here is where I keep some snippets [gist](https://gist.github.com/mayelespino)
+
 ----
 
 # My Resume and other pages
