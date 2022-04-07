@@ -1,17 +1,21 @@
 #
 # tabular version of bestSum.py
+# return the shortest combination that results in the target.
 #
 def bestSumTab(target, numbers):
-    table = [False] * (target + 1)
+    table = [None] * (target + 1)
     table[0] = []
 
     for index, spot in enumerate(table):
-        if spot is False:
+        if spot is None:
             continue
+
         for number in numbers:
             if (index + number) > target: continue
-            
-            table[(index + number)] = True
+            newList = spot.copy()
+            newList.append(number)
+            if table[(index + number)] == None or len(table[(index + number)] ) < len(newList):
+                table[(index + number)] = newList
 
     return table[target]
 
