@@ -91,4 +91,5 @@ if __name__ == "__main__":
 # Links I consulted:
 # https://www.codespeedy.com/how-to-implement-binary-tree-in-python/
 # https://www.pythontutorial.net/python-oop/python-__repr__/
+# https://youtu.be/fPz40W9mfCg
 
