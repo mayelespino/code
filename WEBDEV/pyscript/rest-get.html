@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<HTML>
+    <head>
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+    </head>
+    <body>
+    <h2>Example 1</h2>
+    <py-script style="font-size: 300%; color: blue">
+        from pyodide.http import pyfetch
+        import asyncio
+        response = await pyfetch(url="https://jsonplaceholder.typicode.com/todos/1", method="GET")
+        output = f"GET request=> status:{response.status}, json:{await response.json()}"
+        print(output)
+    </py-script>
+    <h2>Example 2</h2>
+    <py-script style="font-size: 300%; color: red">
+        from js import XMLHttpRequest
+        req = XMLHttpRequest.new()
+        req.open("GET", "https://jsonplaceholder.typicode.com/todos/1", False)
+        req.send(None)
+        output = str(req.response)
+        print(output)
+    </py-script>
+    </body>
+</HTML>
+
+<!--
+- https://blog.devgenius.io/pyscript-making-http-requests-best-approach-tutorial-8ae062438335
+
+-->
