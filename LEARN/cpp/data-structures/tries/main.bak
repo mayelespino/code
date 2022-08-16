@@ -1,0 +1,29 @@
+#include <iostream>
+#include<unordered_map>
+using namespace std;
+
+struct TrieNode {
+    unordered_map<char, TrieNode*> children;
+
+};
+
+void addToTrie(const string prefix, TrieNode* rootNode) {
+	cout <<"prefix: " << prefix << endl;
+}
+
+
+int main(int argc, char** argv)
+{
+	string stringInput;
+	TrieNode rootNode;
+
+	cout << "Enter string, or a '.' to end: " << endl;
+	while (1) {
+		cin >> stringInput;
+		if (stringInput == ".") { break; }
+		addToTrie(stringInput, &rootNode);
+		cout << ": ";
+	}
+
+	return 0;
+}
