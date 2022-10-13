@@ -1,6 +1,6 @@
 # Mayel Espino's Code exercises
 
-These are exercises I do to learn a few different technologies, languages and tools. I some cases I get some code form the internet to start and in others I start from scratch or something I read. I try to references to what I used to get started, somethimes I did not and then forgot to do so later. 
+These are exercises I do to learn a few different technologies, languages and tools. I some cases I get some code form the internet to start and in others I start from scratch or something I read. I try to references to what I used to get started, sometimes I did not and then forgot to do so later. 
 
 I did not always do a good job of documenting and not use the best coding practices. I will retrofit these as I get a chance.
 
