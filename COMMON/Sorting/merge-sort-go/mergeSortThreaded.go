@@ -1,3 +1,6 @@
+// "I wonder if sorting can be done concurrently?" I think this is a much more interesting and better question than what is the O() space and time complexity.
+// I concluded that the merge-sort algorithm lends itself best to multi-threading. This is what I came up with:
+
 package main
 
 
