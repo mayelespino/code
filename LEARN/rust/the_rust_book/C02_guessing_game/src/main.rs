@@ -1,3 +1,7 @@
+/*
+* Rust book Chapter 2
+* Lets get rusty tutorial : https://youtu.be/H0xBSbnQYds
+*/
 extern crate rand;
 use std::io;
 use rand::Rng;
