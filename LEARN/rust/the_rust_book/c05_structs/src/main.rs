@@ -28,7 +28,7 @@ impl Rectangle {
 
 // These are associated methods, they do not pass &self
 impl Rectangle {
-    fn (size: u32) -> Rectangle {
+    fn square(size: u32) -> Rectangle {
         Rectangle {
             width: size,
             height: size
