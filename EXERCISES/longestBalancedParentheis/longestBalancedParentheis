@@ -1,0 +1,101 @@
+# Q1
+# # Define a function which calcualte the IOU of two given segmentation mask.
+# # gt = [[1,0,0],[1,1,1],[0,1,1]]
+# # pred = [[1,0,1],[1,1,1],[0,0,0]]
+# # inter[[1,0,0][1,1,1][0,0,0]] -> 4
+# # I: # pixels both gt and pred = 1
+# # U: # pixels any gt or pred = 1
+# # I/U
+# # 4/7
+
+# import numpy as np
+
+# arr1 = np.array([[1,0,0],[1,1,1],[0,1,1]])
+# arr2 = np.array([[1,0,1],[1,1,1],[0,0,0]])
+# newarr = np.union1d(arr1, arr2)
+# print(newarr)
+
+# Q2
+
+# Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses substring.
+
+
+# Example 1:
+# Input: s = "(()"
+# Output: 2
+# Explanation: The longest valid parentheses substring is "()".
+
+# Example 2:
+# Input: s = ")()())"
+# Output: 4
+# Explanation: The longest valid parentheses substring is "()()".
+
+# Example 3:
+# Input: s = ""
+# Output: 0
+
+# Eg. 4: s= "()((())"
+# Output: 4
+
+# Eg. 5: s= "()((()))"
+
+# Output: 8
+
+# ()(() -> 2
+# (, is next ) -f yes increment counter
+
+# (()() -> 4
+# ==============
+# () -> 0 -> Valid count ->2
+# )( -> -1 -Invalid and reset to 0
+# (() 1,2,1 -> found 1 valud add 2 to valid count
+# ==============
+
+def findLongestWF(inputStr):
+   str1 = inputStr.replace(")(","),(")
+   parts = str1.split(",")
+   pairs = []
+   canMerge = []
+   for part in parts:
+      openCount = part.count("(")
+      closeCount = part.count(")")
+      pairCount = min(openCount,closeCount)
+      pairs.append(pairCount)
+      if openCount == closeCount:
+         canMerge.append("B")
+      elif openCount > closeCount:
+         canMerge.append("R")
+      else:
+         canMerge.append("L")
+   result = list(zip(parts,pairs,canMerge))
+   lenghts = []
+   currentLenght = 0
+   for item in result:
+      if item[2] == 'R':
+         lenghts.append(currentLenght)
+         currentLenght = item[1] * 2
+      else:
+         currentLenght += item[1] * 2
+   else:
+      lenghts.append(currentLenght)
+
+   #print(result)
+   return (max(lenghts))
+
+
+# def findLongestWF(inputStr):
+#    while len(copyStr) > 1:
+
+
+
+print(findLongestWF("()()()()()()(((())))"),"Example: 1, should be: 20")
+print(findLongestWF(")()()"),"Example: 2, should be:  4")
+print(findLongestWF("(()"),"Example: 3, should be:2") # 2
+print(findLongestWF(")()())"),"Example: 4, should be: 4")  # 4
+print(findLongestWF(""),"Example: 5, should be: 0")  # 0
+print(findLongestWF("()((())"),"Example: 6, should be:4")  # 4,
+print(findLongestWF("((()))()"),"Example: 7, should be: 8")  # 8
+print(findLongestWF("()((())("),"Example: 8, should be: 4")  # 6,
+
+
+
