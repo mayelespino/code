@@ -1,6 +1,13 @@
 /*
-* Rust tutorial, chapter 13 Testing: https://my.americanhondafinance.com/s/dashboard
+* Rust tutorial, chapter 13 Testing:
+* Part 1: https://youtu.be/18-7NoNPO30
+* Part 2: https://youtu.be/-L4nKAlmH3M
+* -------------------------------------
 * You run the test using "cargo test"
+* To run a particular test:
+* 
+* To run all tests in a module
+*
 *
 */
 #[derive(Debug)]
