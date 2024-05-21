@@ -12,8 +12,7 @@ class Trie:
 
     def addWords(self, wordList):
         for word in wordList:
-#            self.addWord(word)
-            self.insert(word)
+            self.addWord(word)
 
     def addWord(self, word):
         node = self.root
