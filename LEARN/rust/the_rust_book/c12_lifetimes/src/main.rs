@@ -48,10 +48,10 @@ fn main() {
     */
 
     let novel = String::from("Call me Ishmael. Some years ago...");
-    let first_sentence = novel.spllit('.').expect("Could not find .");
+    let first_sentence = novel.split('.').expect("Could not find .");
     let i =  ImportantExcerpt {
         part: first_sentence,
-    }
+    };
 
     /*
     * 1. Each parameter that is a reference gets its own lifetime parameter.
