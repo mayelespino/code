@@ -4,18 +4,6 @@ These are exercises I do to learn a few different technologies, languages and to
 
 I did not always do a good job of documenting and not use the best coding practices. I will retrofit these as I get a chance.
 
-## The layout
-
-Here is how I have organized it:
-
-- [DATABASES](DATABASES/README.md) - Exercises to learn databases.
-- [DATASTRUCTURES](DATASTRUCTURES/README.md) - Data structures in multiple languages.
-- [EXERCISES](EXERCISES/README.md) - Common exercises, some algorithms, in multiple languages.
-- [EXPERIMENTS](EXPERIMENTS/README.md) - Various experiments that might turn in to projects.
-- [LEARN](LEARN/README.md) - Tutorials and exercises to learn multiple languages.
-- [NOTES](NOTES/README.md)
-- [WEBDEV](WEBDEV/README.md) - Exercises to learn web development.
-
 # Wiki
 
 Here I keep my notes and links to many resources: [Wiki](https://github.com/mayelespino/code/wiki)
