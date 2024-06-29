@@ -25,6 +25,23 @@ def main():
     collatz(6)
     collatz(7)
     collatz(sys.maxsize)
+    
+    collatz(11)
+    collatz(13)
+    collatz(17)
+    collatz(19)
+    collatz(23)
+    collatz(29)
+    collatz(31)
+    collatz(37)
+    collatz(41)
+    collatz(43)
+    collatz(47)
+    collatz(53)
+    collatz(59)
+    collatz(61)
+    collatz(67)
+    collatz(71)
 
     for _ in range(5):
         collatz(randint(0, sys.maxsize))
