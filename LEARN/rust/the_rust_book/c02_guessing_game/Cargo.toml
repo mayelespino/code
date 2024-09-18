@@ -1,8 +1,0 @@
-[package]
-name = "c02_guessing_game"
-version = "0.1.0"
-authors = ["Mayel Espino <mayel.espino@gmail.com>"]
-
-[dependencies]
-rand = "0.3.14"
-colored = "2.0.0"

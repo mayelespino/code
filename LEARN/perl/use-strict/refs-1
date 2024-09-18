@@ -1,8 +1,0 @@
-#!/usr/bin/perl
-
-use strict "refs";
-
-$foo="foo";
-$bar=\$foo;
-print $$foo;
-print "\n\n";

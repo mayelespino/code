@@ -1,3 +1,0 @@
-/home/mayel/GIT/code/LEARN/c++/HelloWorld/CMakeFiles/edit_cache.dir
-/home/mayel/GIT/code/LEARN/c++/HelloWorld/CMakeFiles/rebuild_cache.dir
-/home/mayel/GIT/code/LEARN/c++/HelloWorld/CMakeFiles/HelloWorld.dir

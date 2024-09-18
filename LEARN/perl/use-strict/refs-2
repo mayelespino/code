@@ -1,7 +1,0 @@
-#!/usr/bin/perl
-
-use strict "refs";
-
-#normally ok
-$foo = "foo\n";
-print $foo "<=\n";
